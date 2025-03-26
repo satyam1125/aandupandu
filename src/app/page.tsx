@@ -156,7 +156,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#F8FBFE]">
+    <div className="flex min-h-screen flex-col bg-[#F8FBFE] ">
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container flex h-22 items-center justify-between">
           <div className="flex items-center gap-2">
