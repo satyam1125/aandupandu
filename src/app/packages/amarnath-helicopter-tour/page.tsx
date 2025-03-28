@@ -1,160 +1,116 @@
+import { Layout } from "@/components/layout"
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronRight, Clock, Calendar, MapPin, CheckCircle2, AlertCircle, Phone, Mail } from "lucide-react"
-
+import { ChevronRight, Clock, Calendar, MapPin, CheckCircle2, AlertCircle, Phone, Mail } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RegistrationForm } from "@/components/registration-form"
-import { BackgroundBeams } from "@/components/ui/background-beams"
-import { MobileNav } from "@/components/mobile-nav"
+import { motion } from "framer-motion"
 
-export default function DoDhamHelicopterTourPage() {
+export default function AmarnathHelicopterTourPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F8FBFE]">
-      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/placeholder.svg?height=32&width=32"
-                alt="Triloki Hospitality Logo"
-                width={32}
-                height={32}
-                className="rounded-full bg-[#00A7B5]"
-              />
-              <span className="hidden font-bold text-[#00A7B5] sm:inline-block">Triloki Hospitality</span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              Home
-            </Link>
-            <Link href="/#packages" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              Packages
-            </Link>
-            <Link href="/#about" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              About Us
-            </Link>
-            <Link href="/#testimonials" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              Testimonials
-            </Link>
-            <Link href="/#contact" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex border-[#00A7B5] text-[#00A7B5] hover:bg-[#00A7B5] hover:text-white"
+    <Layout>
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-[#B0D8DF]/20 to-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col justify-center space-y-4"
             >
-              <Link href="/#contact">Contact Us</Link>
-            </Button>
-            <MobileNav />
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-[#00A7B5]">
+                  Amarnath Helicopter Tour
+                </h1>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  Experience the divine pilgrimage to the holy Amarnath Cave with our premium helicopter service, offering comfort and convenience.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center">
+                  <Clock className="mr-2 h-5 w-5 text-[#FF8200]" />
+                  <span>2 Nights / 3 Days</span>
+                </div>
+                <div className="flex items-center">
+                  <Calendar className="mr-2 h-5 w-5 text-[#FF8200]" />
+                  <span>Available during Yatra Season (July-August)</span>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="mr-2 h-5 w-5 text-[#FF8200]" />
+                  <span>Starts from Srinagar</span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Button asChild size="lg" className="bg-[#FF8200] hover:bg-[#FF9F1C] text-white">
+                  <a href="#booking">
+                    Book Now
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  asChild
+                  className="border-[#00A7B5] text-[#00A7B5] hover:bg-[#00A7B5] hover:text-white"
+                >
+                  <a href="#itinerary">View Itinerary</a>
+                </Button>
+              </div>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square"
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1626015788586-cea86872edc6?q=80&w=1974&auto=format&fit=crop"
+                alt="Amarnath Helicopter Tour"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
           </div>
         </div>
-      </header>
-      <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-[#B0D8DF]/30 via-white to-[#FFCC00]/10">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-[#00A7B5]">
-                    Do Dham Helicopter Tour
-                  </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    Experience the divine Do Dham Yatra (Kedarnath & Badrinath) in comfort with our premium helicopter
-                    service.
+      </section>
+
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <Tabs defaultValue="overview" className="w-full">
+            <TabsList className="grid w-full grid-cols-4">
+              <TabsTrigger value="overview" className="text-[#00A7B5]">Overview</TabsTrigger>
+              <TabsTrigger value="itinerary" id="itinerary" className="text-[#00A7B5]">
+                Itinerary
+              </TabsTrigger>
+              <TabsTrigger value="inclusions" className="text-[#00A7B5]">Inclusions</TabsTrigger>
+              <TabsTrigger value="terms" className="text-[#00A7B5]">Terms & Conditions</TabsTrigger>
+            </TabsList>
+            <TabsContent value="overview" className="mt-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-6"
+              >
+                <div>
+                  <h2 className="text-2xl font-bold text-[#00A7B5]">Amarnath Helicopter Tour – 2 Nights/3 Days</h2>
+                  <h3 className="text-xl font-medium text-muted-foreground">
+                    Srinagar – Neelgrath – Panchtarni – Amarnath Cave
+                  </h3>
+                  <p className="mt-4">
+                    The Amarnath Yatra is one of the most sacred pilgrimages in Hinduism, taking devotees to the holy cave shrine of Lord Shiva, where the ice lingam forms naturally. Our helicopter service makes this challenging pilgrimage accessible to all devotees, reducing a trek of several days to a comfortable helicopter ride.
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center">
-                    <Clock className="mr-2 h-5 w-5 text-[#FF8200]" />
-                    <span>3 Nights / 4 Days</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className="mr-2 h-5 w-5 text-[#FF8200]" />
-                    <span>Available Year Round</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="mr-2 h-5 w-5 text-[#FF8200]" />
-                    <span>Starts from Dehradun</span>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button asChild size="lg" className="bg-[#FF8200] hover:bg-[#FF9F1C] text-white">
-                    <a href="#booking">
-                      Book Now
-                      <ChevronRight className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    asChild
-                    className="border-[#00A7B5] text-[#00A7B5] hover:bg-[#00A7B5] hover:text-white"
+
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
                   >
-                    <a href="#itinerary">View Itinerary</a>
-                  </Button>
-                </div>
-              </div>
-              <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00A7B5]/20 to-[#FF8200]/20 rounded-xl"></div>
-                <Image
-                  src="/placeholder.svg?height=800&width=800"
-                  alt="Do Dham Helicopter Tour"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <Tabs defaultValue="overview" className="w-full">
-              <TabsList className="grid w-full grid-cols-4 bg-[#B0D8DF]/20">
-                <TabsTrigger
-                  value="overview"
-                  className="data-[state=active]:bg-[#00A7B5] data-[state=active]:text-white"
-                >
-                  Overview
-                </TabsTrigger>
-                <TabsTrigger
-                  value="itinerary"
-                  id="itinerary"
-                  className="data-[state=active]:bg-[#00A7B5] data-[state=active]:text-white"
-                >
-                  Itinerary
-                </TabsTrigger>
-                <TabsTrigger
-                  value="inclusions"
-                  className="data-[state=active]:bg-[#00A7B5] data-[state=active]:text-white"
-                >
-                  Inclusions
-                </TabsTrigger>
-                <TabsTrigger value="terms" className="data-[state=active]:bg-[#00A7B5] data-[state=active]:text-white">
-                  Terms & Conditions
-                </TabsTrigger>
-              </TabsList>
-              <TabsContent value="overview" className="mt-6">
-                <div className="space-y-6">
-                  <div>
-                    <h2 className="text-2xl font-bold text-[#00A7B5]">Do Dham Helicopter Tour – 3 Nights/4 Days</h2>
-                    <h3 className="text-xl font-medium text-muted-foreground">Kedarnath – Badrinath</h3>
-                    <p className="mt-4">
-                      The Do Dham Yatra comprises a tour of north India's most revered Hindu shrines, Kedarnath &
-                      Badrinath. This pilgrim circuit is considered highly auspicious and blissful by all Hindu
-                      devotees.
-                    </p>
-                  </div>
-
-                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <Card className="border-[#B0D8DF] hover:border-[#00A7B5]">
                       <CardHeader>
                         <CardTitle className="text-[#00A7B5]">Package Highlights</CardTitle>
@@ -163,28 +119,34 @@ export default function DoDhamHelicopterTourPage() {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Helicopter flying to Kedarnath & Badrinath</span>
+                            <span>Helicopter service to Panchtarni helipad</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Accommodation for 3 nights with meals</span>
+                            <span>Luxury accommodation in Srinagar</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Priority Darshan at all shrines</span>
+                            <span>Priority darshan at the holy cave</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Guided local sightseeing</span>
+                            <span>Experienced guides for the trek from Panchtarni</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Rudra Abhishek Puja at Kedarnath</span>
+                            <span>All necessary permits and registrations</span>
                           </li>
                         </ul>
                       </CardContent>
                     </Card>
+                  </motion.div>
 
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
                     <Card className="border-[#B0D8DF] hover:border-[#00A7B5]">
                       <CardHeader>
                         <CardTitle className="text-[#00A7B5]">Accommodations</CardTitle>
@@ -193,20 +155,30 @@ export default function DoDhamHelicopterTourPage() {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Dehradun – Fairfeild By Marriot or similar</span>
+                            <span>Srinagar – Deluxe Houseboat or 4-star hotel</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Kedarnath – Kabra Bhawan or similar</span>
+                            <span>All accommodations with private facilities</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Badrinath – Hotel Snow Crest or similar</span>
+                            <span>Vegetarian meals included</span>
+                          </li>
+                          <li className="flex items-start">
+                            <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
+                            <span>24-hour hot water and electricity backup</span>
                           </li>
                         </ul>
                       </CardContent>
                     </Card>
+                  </motion.div>
 
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
                     <Card className="border-[#B0D8DF] hover:border-[#00A7B5]">
                       <CardHeader>
                         <CardTitle className="text-[#00A7B5]">Important Notes</CardTitle>
@@ -215,15 +187,15 @@ export default function DoDhamHelicopterTourPage() {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
-                            <span>Maha Abhishek puja at Badrinath is not included</span>
+                            <span>Medical fitness certificate is mandatory</span>
                           </li>
                           <li className="flex items-start">
                             <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
-                            <span>Accommodations at Kedarnath are of basic budget categories</span>
+                            <span>Helicopter operations are subject to weather conditions</span>
                           </li>
                           <li className="flex items-start">
                             <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
-                            <span>Temperature at Kedarnath might drop to sub-zero during the night</span>
+                            <span>The trek from Panchtarni to the cave is approximately 6 km</span>
                           </li>
                           <li className="flex items-start">
                             <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
@@ -232,97 +204,89 @@ export default function DoDhamHelicopterTourPage() {
                         </ul>
                       </CardContent>
                     </Card>
-                  </div>
+                  </motion.div>
                 </div>
-              </TabsContent>
+              </motion.div>
+            </TabsContent>
 
-              <TabsContent value="itinerary" className="mt-6">
-                <div className="space-y-8">
-                  <div className="space-y-2">
-                    <h2 className="text-2xl font-bold text-[#00A7B5]">Tour Itinerary</h2>
-                    <p>A detailed day-by-day plan of your spiritual journey.</p>
-                  </div>
-
-                  <div className="space-y-6">
-                    <div className="border-l-4 border-[#FF8200] pl-4">
-                      <h3 className="text-xl font-bold">Day 01: Dehradun</h3>
-                      <ul className="mt-2 space-y-2">
-                        <li>
-                          • Dehradun is a helicopter base and is the starting & ending point of the Do Dham heli yatra.
-                        </li>
-                        <li>• Land transfer from Dehradun Airport/railway station to hotel for a night stay.</li>
-                        <li>
-                          • Tour briefing to be carried out at the hotel in the evening by the base manager – Dinner &
-                          Overnight Dehradun.
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="border-l-4 border-[#FF8200] pl-4">
-                      <h3 className="text-xl font-bold">Day 02: Dehradun – Phata – Kedarnath</h3>
-                      <ul className="mt-2 space-y-2">
-                        <li>
-                          • Passengers shall check out by 0600 hrs from the hotel and fly to Phata, a helicopter base of
-                          Kedarnath, and later to Kedarnath after changing the helicopter.
-                        </li>
-                        <li>
-                          • Guests shall be received and escorted to the hotel for check-in upon arrival at Kedarnath
-                          and later shall be taken to Kedarnath Temple for darshan.
-                        </li>
-                        <li>• Post darshan back to the hotel for a night's stay.</li>
-                        <li>• Evening optional guided tour of Bhairon Mandir – Overnight Kedarnath.</li>
-                      </ul>
-                    </div>
-
-                    <div className="border-l-4 border-[#FF8200] pl-4">
-                      <h3 className="text-xl font-bold">Day 03: Kedarnath - Phata- Badrinath</h3>
-                      <ul className="mt-2 space-y-2">
-                        <li>
-                          • Guests shall attend early morning Rudra Abhishek and shall be back to the hotel & be ready
-                          for their flight to Phata and later fly to Badrinath.
-                        </li>
-                        <li>
-                          • Guests shall be received and transferred to the hotel upon arrival at Badrinath and shall be
-                          taken for darshan at Badrinath temple after lunch.
-                        </li>
-                        <li>
-                          • Approximate time taken for Badrinath Temple Darshan is about 01-1.5 Hrs and the Passengers
-                          shall be taken from the hotel to the temple by car.
-                        </li>
-                        <li>• Evening guided sightseeing of Mana Village by cab.</li>
-                        <li>
-                          • Evening Aarti at Temple – Swaran/Chandi Aarti shall be on additional payment - Overnight
-                          Badrinath.
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="border-l-4 border-[#FF8200] pl-4">
-                      <h3 className="text-xl font-bold">Day 04: Badrinath – Dehradun</h3>
-                      <ul className="mt-2 space-y-2">
-                        <li>
-                          • After breakfast Guests are transferred to the Badrinath helipad for their flight to
-                          Dehradun.
-                        </li>
-                        <li>
-                          • Estimated time of arrival at Sahastradhara helipad, Dehradun shall be 0930 hrs. Our base
-                          manager shall receive the guests upon their arrival and guests shall later be dropped to the
-                          airport/railway station to commence their onward journey back home.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+            <TabsContent value="itinerary" className="mt-6">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-8"
+              >
+                <div className="space-y-2">
+                  <h2 className="text-2xl font-bold text-[#00A7B5]">Tour Itinerary</h2>
+                  <p>A detailed day-by-day plan of your spiritual journey to the holy Amarnath Cave.</p>
                 </div>
-              </TabsContent>
 
-              <TabsContent value="inclusions" className="mt-6">
                 <div className="space-y-6">
-                  <div className="space-y-2">
-                    <h2 className="text-2xl font-bold text-[#00A7B5]">Tour Inclusions</h2>
-                    <p>What's included in your Do Dham Helicopter Tour package.</p>
-                  </div>
+                  {[1, 2, 3].map((day, index) => (
+                    <motion.div 
+                      key={day}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="border-l-4 border-[#00A7B5] pl-4"
+                    >
+                      <h3 className="text-xl font-bold">
+                        {day === 1 && "Day 01: Arrival in Srinagar"}
+                        {day === 2 && "Day 02: Srinagar – Neelgrath – Panchtarni – Amarnath Cave – Panchtarni – Neelgrath – Srinagar"}
+                        {day === 3 && "Day 03: Departure from Srinagar"}
+                      </h3>
+                      <ul className="mt-2 space-y-2">
+                        {day === 1 && (
+                          <>
+                            <li>• Arrive at Srinagar Airport where our representative will meet you.</li>
+                            <li>• Transfer to your hotel/houseboat for check-in.</li>
+                            <li>• Evening briefing about the Amarnath Yatra and helicopter procedures.</li>
+                            <li>• Dinner and overnight stay in Srinagar.</li>
+                          </>
+                        )}
+                        {day === 2 && (
+                          <>
+                            <li>• Early morning transfer to Neelgrath Helipad (approximately 1.5 hours drive from Srinagar).</li>
+                            <li>• Board the helicopter for Panchtarni (flight time approximately 10 minutes).</li>
+                            <li>• Trek from Panchtarni to the holy Amarnath Cave (approximately 6 km, 2-3 hours trek).</li>
+                            <li>• Darshan at the holy cave where you can witness the natural ice lingam of Lord Shiva.</li>
+                            <li>• Return trek to Panchtarni and board the helicopter back to Neelgrath.</li>
+                            <li>• Drive back to Srinagar for dinner and overnight stay.</li>
+                          </>
+                        )}
+                        {day === 3 && (
+                          <>
+                            <li>• After breakfast, check-out from the hotel.</li>
+                            <li>• Optional sightseeing in Srinagar (Mughal Gardens, Dal Lake, etc.) depending on your departure time.</li>
+                            <li>• Transfer to Srinagar Airport for your onward journey.</li>
+                            <li>• Tour concludes with memories of the divine darshan of Lord Shiva at Amarnath Cave.</li>
+                          </>
+                        )}
+                      </ul>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </TabsContent>
 
-                  <div className="grid gap-6 md:grid-cols-2">
+            <TabsContent value="inclusions" className="mt-6">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-6"
+              >
+                <div className="space-y-2">
+                  <h2 className="text-2xl font-bold text-[#00A7B5]">Tour Inclusions</h2>
+                  <p>What's included in your Amarnath Helicopter Tour package.</p>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-2">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                  >
                     <Card className="border-[#B0D8DF] hover:border-[#00A7B5]">
                       <CardHeader>
                         <CardTitle className="text-[#00A7B5]">Included in the Package</CardTitle>
@@ -331,49 +295,50 @@ export default function DoDhamHelicopterTourPage() {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Helicopter flying from Dehradun to Kedarnath & Badrinath & back</span>
+                            <span>2 nights accommodation in Srinagar (hotel/houseboat)</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>
-                              Airport / Railway Station – hotel – Helipad & return land transfers at Dehradun by Innova
-                            </span>
+                            <span>All meals (breakfast, lunch, and dinner) as per itinerary</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>
-                              Complimentary 01-night accommodation with breakfast & Dinner at Dehradun on the day of
-                              arrival
-                            </span>
+                            <span>Return helicopter tickets from Neelgrath to Panchtarni</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>
-                              Accommodation for 02 nights e.g., 01 night at each Dham with all vegetarian meals
-                            </span>
+                            <span>All transfers in a private vehicle (airport – hotel – Neelgrath – hotel – airport)</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Guided local sightseeing post-temple visits</span>
+                            <span>Experienced guide for the trek from Panchtarni to Amarnath Cave</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Priority Darshan Slips at all shrines</span>
+                            <span>Yatra registration and necessary permits</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>
-                              Early morning Rudra Abhishek Puja at Kedarnath ji (subject to state government permission)
-                            </span>
+                            <span>Oxygen cylinder for emergency use during the trek</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
-                            <span>Shared return Kedarnath ji helicopter shuttle services from Phata/Sirsi/Sitapur</span>
+                            <span>Basic first aid kit</span>
+                          </li>
+                          <li className="flex items-start">
+                            <CheckCircle2 className="mr-2 h-5 w-5 text-[#FF8200]" />
+                            <span>All applicable taxes except GST</span>
                           </li>
                         </ul>
                       </CardContent>
                     </Card>
+                  </motion.div>
 
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
                     <Card className="border-[#B0D8DF] hover:border-[#00A7B5]">
                       <CardHeader>
                         <CardTitle className="text-[#00A7B5]">Excluded from the Package</CardTitle>
@@ -382,235 +347,163 @@ export default function DoDhamHelicopterTourPage() {
                         <ul className="space-y-2">
                           <li className="flex items-start">
                             <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
-                            <span>
-                              Any services of personal nature and not mentioned in the inclusions like porter charges,
-                              extra meals/snacks, pithhu, palki, tips & donations, etc.
-                            </span>
+                            <span>Airfare to and from Srinagar</span>
                           </li>
                           <li className="flex items-start">
                             <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
-                            <span>Goods & Services Taxes @ 5% on total billing</span>
+                            <span>Pony/Palki/Porter charges for the trek from Panchtarni to Amarnath Cave (available at additional cost)</span>
                           </li>
                           <li className="flex items-start">
                             <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
-                            <span>Maha Abhishek puja at Badrinath</span>
+                            <span>Personal expenses such as telephone calls, laundry, tips, etc.</span>
+                          </li>
+                          <li className="flex items-start">
+                            <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
+                            <span>Travel insurance</span>
+                          </li>
+                          <li className="flex items-start">
+                            <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
+                            <span>Any meals not mentioned in the inclusions</span>
+                          </li>
+                          <li className="flex items-start">
+                            <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
+                            <span>Additional sightseeing or excursions not mentioned in the itinerary</span>
+                          </li>
+                          <li className="flex items-start">
+                            <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
+                            <span>GST @ 5% on total billing</span>
+                          </li>
+                          <li className="flex items-start">
+                            <AlertCircle className="mr-2 h-5 w-5 text-amber-500" />
+                            <span>Any cost arising due to natural calamities, landslides, road blockages, political disturbances, etc.</span>
                           </li>
                         </ul>
                       </CardContent>
                     </Card>
-                  </div>
+                  </motion.div>
                 </div>
-              </TabsContent>
+              </motion.div>
+            </TabsContent>
 
-              <TabsContent value="terms" className="mt-6">
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <h2 className="text-2xl font-bold text-[#00A7B5]">Terms & Conditions</h2>
-                    <p>Important guidelines and policies for your Do Dham Helicopter Tour.</p>
-                  </div>
-
-                  <div className="space-y-6">
-                    <Card className="border-[#B0D8DF] hover:border-[#00A7B5]">
-                      <CardHeader>
-                        <CardTitle className="text-[#00A7B5]">Payment Terms</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2">
-                          <li>
-                            • 30% of the tour package shall be paid in advance to get confirmation of the booking by
-                            official mail.
-                          </li>
-                          <li>• Approximately 70% is to be paid 30 days prior to the yatra date.</li>
-                          <li>
-                            • The full payment is to be made 30 days prior to the date of yatra ex-Dehradun (or any
-                            other helicopter base).
-                          </li>
-                          <li>
-                            • Any delay in payment on the due date shall invite the cancellation of the booking without
-                            any refund.
-                          </li>
-                          <li>
-                            • Passengers shall not be permitted to board or commence the tour unless full & final
-                            payment of the tour is made on the due dates.
-                          </li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-[#B0D8DF] hover:border-[#00A7B5]">
-                      <CardHeader>
-                        <CardTitle className="text-[#00A7B5]">Cancellation and Refund Policy</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2">
-                          <li>
-                            • Any moment after booking with an advance: 30% cancellation and 70% refund of total tour
-                            cost.
-                          </li>
-                          <li>
-                            • 30 days or fewer prior to travel date: 70% Cancellation and 30% refund of total tour cost.
-                          </li>
-                          <li>
-                            • 15 days or fewer prior to the travel date: 100% cancellation and No refund of total tour
-                            cost.
-                          </li>
-                          <li>
-                            • No show or after commencement of the tour: 100% cancellation and No refund of total tour
-                            cost.
-                          </li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </section>
-
-        <section id="booking" className="w-full py-12 md:py-24 lg:py-32 relative">
-          <BackgroundBeams className="opacity-20" />
-          <div className="container px-4 md:px-6 relative z-10">
-            <div className="grid gap-10 px-10 md:gap-16 lg:grid-cols-2">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#00A7B5]">
-                  Book Your Do Dham Helicopter Tour
-                </h2>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                  Fill out the form to register for the Do Dham Helicopter Tour. Our team will get in touch with you to
-                  confirm your booking and provide further details.
-                </p>
+            <TabsContent value="terms" className="mt-6">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-6"
+              >
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-[#00A7B5]">Contact Information</h3>
-                  <div className="grid gap-2">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="h-5 w-5 text-[#FF8200]" />
-                      <span>Hotel Satyam Swagat, Uchapul Aryanagar, Jwalapur, Haridwar</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone className="h-5 w-5 text-[#FF8200]" />
-                      <span>+91-9720340187 / 8445214371</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Mail className="h-5 w-5 text-[#FF8200]" />
-                      <span>hospitality.triloki@gmail.com</span>
-                    </div>
+                  <h2 className="text-2xl font-bold text-[#00A7B5]">Terms & Conditions</h2>
+                  <p>Important guidelines and policies for your Amarnath Helicopter Tour.</p>
+                </div>
+
+                <div className="space-y-6">
+                  {["Payment Terms", "Cancellation and Refund Policy", "Health Requirements", "Important Information"].map((term, index) => (
+                    <motion.div 
+                      key={term}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      <Card className="border-[#B0D8DF] hover:border-[#00A7B5]">
+                        <CardHeader>
+                          <CardTitle className="text-[#00A7B5]">{term}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2">
+                            {term === "Payment Terms" && (
+                              <>
+                                <li>• 50% of the tour package shall be paid in advance to confirm the booking.</li>
+                                <li>• Remaining 50% to be paid 30 days prior to the date of travel.</li>
+                                <li>• For bookings made within 30 days of travel, 100% payment is required at the time of booking.</li>
+                                <li>• All payments to be made by bank transfer or online payment.</li>
+                              </>
+                            )}
+                            {term === "Cancellation and Refund Policy" && (
+                              <>
+                                <li>• Cancellation more than 30 days before travel: 25% of the total tour cost.</li>
+                                <li>• Cancellation between 15-30 days before travel: 50% of the total tour cost.</li>
+                                <li>• Cancellation between 7-14 days before travel: 75% of the total tour cost.</li>
+                                <li>• Cancellation less than 7 days before travel or no-show: 100% of the total tour cost.</li>
+                                <li>• In case of cancellation due to bad weather or natural calamities, we will reschedule the tour or provide a refund after deducting 10% service charges.</li>
+                              </>
+                            )}
+                            {term === "Health Requirements" && (
+                              <>
+                                <li>• A medical fitness certificate is mandatory for all pilgrims.</li>
+                                <li>• Persons with heart ailments, high blood pressure, asthma, or pregnant women are advised not to undertake this pilgrimage.</li>
+                                <li>• The minimum age for the yatra is 13 years and maximum is 75 years.</li>
+                                <li>• Pilgrims are advised to carry personal medications and warm clothing.</li>
+                              </>
+                            )}
+                            {term === "Important Information" && (
+                              <>
+                                <li>• Helicopter operations are subject to weather conditions and DGCA guidelines.</li>
+                                <li>• The helicopter service operates only during daylight hours.</li>
+                                <li>• Each passenger is allowed to carry only 5 kg of luggage.</li>
+                                <li>• The company reserves the right to change the itinerary due to unforeseen circumstances.</li>
+                                <li>• Yatra registration is mandatory and will be arranged by us.</li>
+                              </>
+                            )}
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
+
+      <section id="booking" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-[#B0D8DF]/20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid gap-10 px-4 md:px-10 md:gap-16 lg:grid-cols-2">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#00A7B5]">
+                Book Your Amarnath Helicopter Tour
+              </h2>
+              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
+                Fill out the form to register for the Amarnath Helicopter Tour. Our team will get in touch with you to
+                confirm your booking and provide further details.
+              </p>
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold">Contact Information</h3>
+                <div className="grid gap-2">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-[#FF8200]" />
+                    <span>Hotel Satyam Swagat, Uchapul Aryanagar, Jwalapur, Haridwar</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-5 w-5 text-[#FF8200]" />
+                    <span>+91-9720340187 / 8445214371</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-5 w-5 text-[#FF8200]" />
+                    <span>hospitality.triloki@gmail.com</span>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-start space-y-4">
-                <RegistrationForm />
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer className="border-t bg-white">
-        <div className="container flex flex-col gap-4 py-10 md:flex-row md:gap-8">
-          <div className="flex-1 space-y-4">
-            <div className="flex items-center gap-2">
-              <Image
-                src="/placeholder.svg?height=32&width=32"
-                alt="Triloki Hospitality Logo"
-                width={32}
-                height={32}
-                className="rounded-full bg-[#00A7B5]"
-              />
-              <span className="font-bold text-[#00A7B5]">Triloki Hospitality</span>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Providing premium travel experiences to sacred destinations since 2010.
-            </p>
-          </div>
-          <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
-            <div className="space-y-3">
-              <h3 className="text-sm font-medium text-[#00A7B5]">Company</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/#about" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#contact" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                    Careers
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-3">
-              <h3 className="text-sm font-medium text-[#00A7B5]">Packages</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/packages/chardham-helicopter-tour"
-                    className="text-sm text-muted-foreground hover:text-[#FF8200]"
-                  >
-                    Chardham Helicopter Tour
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/packages/do-dham-helicopter-tour"
-                    className="text-sm text-muted-foreground hover:text-[#FF8200]"
-                  >
-                    Do Dham Helicopter Tour
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/packages/kedarnath-helicopter-tour"
-                    className="text-sm text-muted-foreground hover:text-[#FF8200]"
-                  >
-                    Kedarnath Helicopter Tour
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-3">
-              <h3 className="text-sm font-medium text-[#00A7B5]">Legal</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                    Cancellation Policy
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-start space-y-4"
+            >
+              <RegistrationForm />
+            </motion.div>
           </div>
         </div>
-        <div className="border-t py-6 bg-[#00A7B5]/5">
-          <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-center text-sm text-muted-foreground md:text-left">
-              &copy; {new Date().getFullYear()} Triloki Hospitality. All rights reserved.
-            </p>
-            <div className="flex gap-4">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </section>
+    </Layout>
   )
 }
-
