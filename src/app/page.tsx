@@ -27,7 +27,7 @@ export default function Home() {
       href: "/packages/do-dham-helicopter-tour",
     },
     {
-      title: "Kedarnath Helicopter Tour",
+      title: "Amarnath Helicopter Tour",
       description: "Reach the holy shrine of Kedarnath quickly and comfortably with our dedicated helicopter service.",
       duration: "2 Nights / 3 Days",
       image: "https://i.pinimg.com/736x/e1/98/9f/e1989f4fc766b63dbb10f1244f253480.jpg",

@@ -1,13 +1,17 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileNav } from "@/components/mobile-nav"
 import { motion } from "framer-motion"
+import { BookingModal } from "@/components/booking-modal"
 
 export function Header() {
+  const [bookingModalOpen, setBookingModalOpen] = useState(false)
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto flex h-22 items-center justify-between px-4 md:px-6">
@@ -60,12 +64,18 @@ export function Header() {
               Contact Us
             </Link>
           </Button>
-          <Button asChild size="sm" className="bg-[#FF8200] hover:bg-[#FF9F1C] text-white">
-            <Link href="/packages/chardham-helicopter-tour">Book Now</Link>
+          <Button
+            size="sm"
+            className="bg-[#FF8200] hover:bg-[#FF9F1C] text-white"
+            onClick={() => setBookingModalOpen(true)}
+          >
+            Book Now
           </Button>
           <MobileNav />
         </div>
       </div>
+
+      <BookingModal open={bookingModalOpen} onOpenChange={setBookingModalOpen} />
     </header>
   )
 }
