@@ -1,16 +1,14 @@
-"use client"
+'use client'
 
 import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-
+import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Toaster } from "@/components/ui/toaster" // Updated import from Sonner
 import { LampContainer } from "@/components/ui/lamp"
 
 const formSchema = z.object({
@@ -30,7 +28,6 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const router = useRouter()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -44,18 +41,25 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
-
     try {
-      // Here you would integrate with Appwrite to store the form data
-      // For now, we'll just simulate a successful submission
-      console.log(values)
+      const response = await fetch('/api/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Submission failed')
+      }
 
       toast.success("Message Sent: Thank you for contacting us. We'll get back to you soon.")
-
       form.reset()
     } catch (error) {
-      toast.error("Error: There was a problem sending your message. Please try again." )
-      console.log("Error submitting contact form:", error)
+      toast.error(`Error: ${error instanceof Error ? error.message : "Failed to send message"}`)
+      console.error("Contact form error:", error)
     } finally {
       setIsSubmitting(false)
     }

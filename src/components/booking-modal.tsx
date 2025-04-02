@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useState } from "react"
 import { useForm } from "react-hook-form"
@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { CalendarIcon, Loader2 } from "lucide-react"
 import { format } from "date-fns"
-import { Toaster } from "../components/ui/sonner"
+import { toast } from "sonner"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -25,6 +25,7 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { createBooking } from "@/app/actions/booking-actions"
 
+// Zod schema for form validation
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
@@ -49,6 +50,7 @@ const formSchema = z.object({
 
 type BookingFormValues = z.infer<typeof formSchema>
 
+// Package options
 const packages = [
   { id: "chardham", name: "Chardham Helicopter Tour" },
   { id: "dodham", name: "Do Dham Helicopter Tour" },
@@ -65,6 +67,7 @@ interface BookingModalProps {
 export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  // Initialize form with react-hook-form and Zod
   const form = useForm<BookingFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -77,22 +80,32 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
     },
   })
 
+  // Form submission handler
   async function onSubmit(data: BookingFormValues) {
     setIsSubmitting(true)
     try {
-      await createBooking(data)
-      Toaster({
-        title: "Booking Submitted",
+      // Convert date to ISO string for backend
+      const submissionData = {
+        ...data,
+        travelDate: data.travelDate.toISOString(),
+      }
+
+      await createBooking(submissionData)
+      
+      // Show success notification
+      toast.success("Booking Submitted", {
         description: "We've received your booking request and will contact you shortly.",
       })
+
+      // Reset form and close modal
       form.reset()
       onOpenChange(false)
     } catch (error) {
       console.error("Booking error:", error)
-      Toaster({
-        title: "Submission Error",
-        description: "There was a problem submitting your booking. Please try again.",
-        variant: "destructive",
+      
+      // Show error notification
+      toast.error("Submission Error", {
+        description: error instanceof Error ? error.message : "There was a problem submitting your booking.",
       })
     } finally {
       setIsSubmitting(false)
@@ -105,12 +118,14 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
         <DialogHeader>
           <DialogTitle className="text-2xl text-center text-[#00A7B5]">Book Your Tour</DialogTitle>
           <DialogDescription className="text-center">
-            Fill out the form below to book your spiritual journey with Triloki Hospitality.
+            Fill out the form below to book your spiritual journey with us.
           </DialogDescription>
         </DialogHeader>
+        
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Name Field */}
               <FormField
                 control={form.control}
                 name="name"
@@ -124,6 +139,8 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
                   </FormItem>
                 )}
               />
+
+              {/* Email Field */}
               <FormField
                 control={form.control}
                 name="email"
@@ -137,6 +154,8 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
                   </FormItem>
                 )}
               />
+
+              {/* Phone Field */}
               <FormField
                 control={form.control}
                 name="phone"
@@ -150,6 +169,8 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
                   </FormItem>
                 )}
               />
+
+              {/* Package Selection */}
               <FormField
                 control={form.control}
                 name="package"
@@ -174,6 +195,8 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
                   </FormItem>
                 )}
               />
+
+              {/* Travel Date Picker */}
               <FormField
                 control={form.control}
                 name="travelDate"
@@ -206,6 +229,8 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
                   </FormItem>
                 )}
               />
+
+              {/* Number of People Select */}
               <FormField
                 control={form.control}
                 name="numberOfPeople"
@@ -232,6 +257,8 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
                 )}
               />
             </div>
+
+            {/* Special Requirements Textarea */}
             <FormField
               control={form.control}
               name="specialRequirements"
@@ -239,18 +266,29 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
                 <FormItem>
                   <FormLabel>Special Requirements</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Any special requirements or questions?" className="resize-none" {...field} />
+                    <Textarea 
+                      placeholder="Any special requirements or questions?" 
+                      className="resize-none" 
+                      {...field} 
+                    />
                   </FormControl>
                   <FormDescription>
-                    Let us know if you have any dietary restrictions, accessibility needs, or other special
-                    requirements.
+                    Let us know if you have any dietary restrictions, accessibility needs, 
+                    or other special requirements.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
             />
+
+            {/* Form Actions */}
             <DialogFooter className="flex flex-col sm:flex-row gap-2">
-              <Button type="button" variant="outline" onClick={() => onOpenChange(false)} className="w-full sm:w-auto">
+              <Button 
+                type="button" 
+                variant="outline" 
+                onClick={() => onOpenChange(false)} 
+                className="w-full sm:w-auto"
+              >
                 Cancel
               </Button>
               <Button
@@ -274,4 +312,3 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
     </Dialog>
   )
 }
-
