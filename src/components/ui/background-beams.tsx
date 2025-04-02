@@ -1,7 +1,7 @@
 "use client"
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
-import { cn } from "@/lib/utils"
+import { cn } from "../../../lib/utils"
 
 export function BackgroundBeams({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({

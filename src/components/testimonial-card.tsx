@@ -1,7 +1,7 @@
 import { Star } from "lucide-react"
 import Image from "next/image"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 import { EvervaultCard } from "@/components/ui/evervault-card"
 
 interface TestimonialCardProps {

@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 import { motion, useAnimationFrame, useMotionTemplate, useMotionValue, useTransform } from "framer-motion"
-import { cn } from "@/lib/utils"
+import { cn } from "../../../lib/utils"
 
 export function MovingBorderButton({
   borderRadius = "1.75rem",
