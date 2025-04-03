@@ -4,16 +4,15 @@ import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
+import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-
-import { Checkbox } from "@/components/ui/checkbox";
-import { Toaster } from "@/components/ui/toaster"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Checkbox } from "@/components/ui/checkbox"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
+import { Toaster } from "sonner"
 
 const formSchema = z.object({
   fullName: z.string().min(2, {
@@ -61,25 +60,30 @@ export function RegistrationForm() {
     setIsSubmitting(true)
 
     try {
-      // Here you would integrate with Appwrite to store the form data
-      // For now, we'll just simulate a successful submission
-      console.log(values)
+      const response = await fetch('/api/registrations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...values,
+          numberOfPeople: parseInt(values.numberOfPeople)
+        }),
+      })
 
-      // Uncomment this when Appwrite is set up
-      // await createRegistration(values)
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to submit registration')
+      }
 
-      toast({
-        title: "Registration Submitted",
-        description:
-          "Thank you for registering for the Chardham Helicopter Tour. Our team will contact you shortly to confirm your booking details.",
+      toast.success("Registration Submitted", {
+        description: "Thank you for registering for the Chardham Helicopter Tour. Our team will contact you shortly to confirm your booking details.",
       })
 
       form.reset()
     } catch (error) {
-      toast({
-        title: "Error",
-        description: "There was a problem submitting your registration. Please try again.",
-        variant: "destructive",
+      toast.error("Registration Failed", {
+        description: error instanceof Error ? error.message : "There was a problem submitting your registration. Please try again.",
       })
     } finally {
       setIsSubmitting(false)
@@ -87,9 +91,10 @@ export function RegistrationForm() {
   }
 
   return (
-    <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-full">
+    <>
+      <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-full">
           <FormField
             control={form.control}
             name="fullName"
@@ -257,13 +262,28 @@ export function RegistrationForm() {
               </FormItem>
             )}
           />
-
-          <Button type="submit" className="w-full bg-[#FF8200] hover:bg-[#FF9F1C] text-white" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Submit Registration"}
-          </Button>
-        </form>
-      </Form>
-    </BackgroundGradient>
+<Button 
+              type="submit" 
+              className="w-full bg-[#FF8200] hover:bg-[#FF9F1C] text-white" 
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Submitting..." : "Submit Registration"}
+            </Button>
+          </form>
+        </Form>
+      </BackgroundGradient>
+      
+      <Toaster 
+        position="top-center"
+        toastOptions={{
+          classNames: {
+            toast: 'group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border',
+            description: 'group-[.toast]:text-muted-foreground',
+            actionButton: 'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground',
+            cancelButton: 'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground',
+          },
+        }}
+      />
+    </>
   )
 }
-
