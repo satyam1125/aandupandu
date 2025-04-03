@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation'
 
 export default async function AdminPage() {
   const session = await getSession()
-  if (!session){ redirect('/login')}
+  if (!session) redirect('/login')
 
   return (
     <div className="container mx-auto py-8">

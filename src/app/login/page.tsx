@@ -8,12 +8,7 @@ import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
 import Link from 'next/link'
 
-export const viewport = {
-  themeColor: '#00A7B5',
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-}
+
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
