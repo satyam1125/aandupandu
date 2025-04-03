@@ -18,27 +18,36 @@ export async function POST(request: Request) {
       )
     }
 
+    // Validate and parse data
+    const parsedData = {
+      name: bookingData.name,
+      email: bookingData.email,
+      phone: bookingData.phone || '',
+      package: bookingData.package,
+      travel_date: new Date(bookingData.travelDate).toISOString(),
+      number_of_people: parseInt(bookingData.numberOfPeople) || 1,
+      special_requirements: bookingData.specialRequirements || ''
+    }
+
     // Insert into Supabase
     const { data, error } = await supabase
       .from('bookings')
-      .insert([{
-        name: bookingData.name,
-        email: bookingData.email,
-        phone: bookingData.phone,
-        package: bookingData.package,
-        travel_date: bookingData.travelDate,
-        number_of_people: parseInt(bookingData.numberOfPeople),
-        special_requirements: bookingData.specialRequirements
-      }])
+      .insert([parsedData])
       .select()
 
-    if (error) throw error
+    if (error) {
+      console.error('Supabase error:', error)
+      return NextResponse.json(
+        { error: error.message },
+        { status: 500 }
+      )
+    }
 
     return NextResponse.json(data[0], { status: 201 })
   } catch (error) {
-    console.error('Booking error:', error)
+    console.error('Booking creation error:', error)
     return NextResponse.json(
-      { error: 'Failed to create booking' },
+      { error: 'Internal server error' },
       { status: 500 }
     )
   }

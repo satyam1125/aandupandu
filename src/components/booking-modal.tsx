@@ -84,34 +84,28 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
   async function onSubmit(data: BookingFormValues) {
     setIsSubmitting(true)
     try {
-      // Convert date to ISO string for backend
       const submissionData = {
         ...data,
-        travelDate: data.travelDate.toISOString(),
+        travelDate: data.travelDate.toISOString()
       }
-
+  
+      console.log('Submitting booking:', submissionData) // Add this line
+      
       await createBooking(submissionData)
       
-      // Show success notification
-      toast.success("Booking Submitted", {
-        description: "We've received your booking request and will contact you shortly.",
-      })
-
-      // Reset form and close modal
+      toast.success("Booking Submitted")
       form.reset()
       onOpenChange(false)
     } catch (error) {
-      console.error("Booking error:", error)
-      
-      // Show error notification
-      toast.error("Submission Error", {
-        description: error instanceof Error ? error.message : "There was a problem submitting your booking.",
+      console.error("Booking error details:", error)
+      toast.error("Submission Failed", {
+        description: error instanceof Error ? error.message : "Please check your input and try again"
       })
     } finally {
       setIsSubmitting(false)
     }
   }
-
+  
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
