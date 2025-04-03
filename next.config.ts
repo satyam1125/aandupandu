@@ -6,7 +6,8 @@ const nextConfig = {
       'i.pinimg.com', 
       'images.unsplash.com', 
       'dynamic-media-cdn.tripadvisor.com',
-      'images.bhaskarassets.com'
+      'images.bhaskarassets.com',
+      'photos.hotelbeds.com'
     ],
   },
   async headers() {

@@ -23,7 +23,7 @@ export function Header() {
         >
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="https://i.pinimg.com/736x/85/ed/fa/85edfa82040e541abd7b997b4ab5a3b4.jpg"
+              src="/images/T_logo.png"
               alt="Triloki Hospitality Logo"
               width={40}
               height={40}

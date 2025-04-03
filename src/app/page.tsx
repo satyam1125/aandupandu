@@ -30,44 +30,44 @@ export default function Home() {
       title: "Amarnath Helicopter Tour",
       description: "Reach the holy shrine of Kedarnath quickly and comfortably with our dedicated helicopter service.",
       duration: "2 Nights / 3 Days",
-      image: "https://i.pinimg.com/736x/e1/98/9f/e1989f4fc766b63dbb10f1244f253480.jpg",
+      image: "https://i.pinimg.com/736x/6c/5a/de/6c5adefe98ece43b5ba6797a043ecf70.jpg",
       href: "/packages/amarnath-helicopter-tour",
     },
     {
       title: "Road-based Chardham Yatra",
       description: "Experience the traditional Chardham Yatra by road, taking in the scenic beauty of the Himalayas.",
       duration: "10 Nights / 11 Days",
-      image: "https://i.pinimg.com/736x/0e/3a/17/0e3a17bc32ba490de419a7123b561dc8.jpg",
+      image: "https://i.pinimg.com/736x/68/c8/3e/68c83e329865148545590b68e809ca18.jpg",
       href: "/packages/road-chardham-yatra",
     },
   ]
 
-  const testimonials = [
-    {
-      name: "Rajesh Sharma",
-      location: "Delhi",
-      quote:
-        "The Chardham Helicopter Tour was a life-changing experience. The team at Triloki Hospitality took care of everything, making our pilgrimage smooth and comfortable.",
-      rating: 5,
-      image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
-    },
-    {
-      name: "Priya Patel",
-      location: "Mumbai",
-      quote:
-        "I was amazed by the professionalism and attention to detail. The helicopter service was excellent, and the accommodations were comfortable despite being in remote locations.",
-      rating: 5,
-      image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
-    },
-    {
-      name: "Suresh Kumar",
-      location: "Bangalore",
-      quote:
-        "As senior citizens, we were worried about the Chardham Yatra, but Triloki Hospitality made it possible for us to complete the pilgrimage comfortably with their helicopter service.",
-      rating: 4,
-      image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
-    },
-  ]
+  // const testimonials = [
+  //   {
+  //     name: "Rajesh Sharma",
+  //     location: "Delhi",
+  //     quote:
+  //       "The Chardham Helicopter Tour was a life-changing experience. The team at Triloki Hospitality took care of everything, making our pilgrimage smooth and comfortable.",
+  //     rating: 5,
+  //     image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
+  //   },
+  //   {
+  //     name: "Priya Patel",
+  //     location: "Mumbai",
+  //     quote:
+  //       "I was amazed by the professionalism and attention to detail. The helicopter service was excellent, and the accommodations were comfortable despite being in remote locations.",
+  //     rating: 5,
+  //     image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
+  //   },
+  //   {
+  //     name: "Suresh Kumar",
+  //     location: "Bangalore",
+  //     quote:
+  //       "As senior citizens, we were worried about the Chardham Yatra, but Triloki Hospitality made it possible for us to complete the pilgrimage comfortably with their helicopter service.",
+  //     rating: 4,
+  //     image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
+  //   },
+  // ]
 
   const features = [
     {
@@ -156,7 +156,7 @@ export default function Home() {
       <PackagesSection packageItems={packageItems} />
       <FeaturesSection features={features} />
       <AboutSection />
-      <TestimonialsSection testimonials={testimonials} />
+      {/* <TestimonialsSection testimonials={testimonials} /> */}
       <ContactSection />
     </Layout>
   )

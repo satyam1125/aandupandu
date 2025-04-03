@@ -68,7 +68,7 @@ export default function AmarnathHelicopterTourPage() {
               className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square"
             >
               <Image
-                src="https://images.unsplash.com/photo-1626015788586-cea86872edc6?q=80&w=1974&auto=format&fit=crop"
+                src="https://i.pinimg.com/736x/6c/5a/de/6c5adefe98ece43b5ba6797a043ecf70.jpg"
                 alt="Amarnath Helicopter Tour"
                 fill
                 className="object-cover"

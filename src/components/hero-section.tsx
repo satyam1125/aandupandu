@@ -93,12 +93,13 @@ export function HeroSection() {
           </div>
           <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00A7B5]/20 to-[#FF8200]/20 rounded-xl"></div>
-            <Image
-              src="https://images.bhaskarassets.com/web2images/521/2023/02/23/chardham-1_1677154261.gif"
-              alt="Chardham Helicopter Tour"
-              fill
-              className="object-cover"
-              priority
+            <video 
+              src="/images/chardham.mp4" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
