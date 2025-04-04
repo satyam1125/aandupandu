@@ -8,7 +8,7 @@ const supabase = createClient(
 
 
 export async function getSession() {
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const session = cookieStore.get('session')?.value
   
   if (!session) return null
@@ -22,21 +22,24 @@ export async function getSession() {
       .single()
 
     return data ? { email } : null
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return null
   }
 }
 
 export async function createSession(email: string) {
-  cookies().set('session', JSON.stringify({ email }), {
+  const cookieStore = await cookies();
+  cookieStore.set('session', JSON.stringify({ email }), {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     maxAge: 60 * 60 * 24 * 7,
     path: '/',
     sameSite: 'lax'
-  })
+  });
 }
 
 export async function destroySession() {
-  cookies().delete('session')
+  const cookieStore = await cookies();
+  cookieStore.delete('session');
 }

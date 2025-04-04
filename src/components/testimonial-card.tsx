@@ -38,7 +38,7 @@ export function TestimonialCard({ name, location, quote, rating, image }: Testim
           </div>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground italic">"{quote}"</p>
+          <p className="text-muted-foreground italic">&quot;{quote}&quot;</p>
         </CardContent>
       </Card>
     </EvervaultCard>

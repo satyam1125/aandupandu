@@ -15,14 +15,14 @@ export function MovingBorderButton({
 }: {
   borderRadius?: string
   children: React.ReactNode
-  as?: any
+  as?: React.ElementType
   containerClassName?: string
   borderClassName?: string
   duration?: number
   className?: string
-  [key: string]: any
+  [key: string]: unknown
 }) {
-  const pathRef = React.useRef<any>()
+  const pathRef = React.useRef<HTMLDivElement | null>(null)
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 

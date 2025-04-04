@@ -2,7 +2,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { MovingBorderButton } from "@/components/ui/moving-border"
 import { TypewriterEffect } from "@/components/ui/typewriter-effect"
 
 export function HeroSection() {

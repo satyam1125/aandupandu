@@ -1,6 +1,13 @@
 'use server'
 
-export async function createBooking(formData: any) {
+interface BookingFormData {
+  name: string;
+  email: string;
+  date: string;
+  [key: string]: string | number | boolean | null | undefined; // Optional: if additional fields are expected
+}
+
+export async function createBooking(formData: BookingFormData) {
   try {
     const response = await fetch('/api/bookings', {
       method: 'POST',

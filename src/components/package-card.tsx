@@ -2,8 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Clock, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { AnimatedTooltip } from "@/components/ui/animated-tooltip"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface PackageCardProps {
   title: string

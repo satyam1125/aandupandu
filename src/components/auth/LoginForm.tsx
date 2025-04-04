@@ -31,8 +31,9 @@ export function LoginForm() {
       }
 
       router.push('/admin')
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      toast.error('Authentication failed. Please check your credentials.')
+      toast.error('Authentication failed. Please check your credentials.  ', )
     } finally {
       setLoading(false)
     }

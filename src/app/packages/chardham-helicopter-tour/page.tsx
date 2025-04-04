@@ -109,7 +109,7 @@ export default function ChardhamHelicopterTourPage() {
                     Yamunotri – Gangotri – Kedarnath – Badrinath
                   </h3>
                   <p className="mt-4">
-                    The Chardham Yatra comprises a tour of north India's most revered Hindu shrines, Yamunotri,
+                    The Chardham Yatra comprises a tour of north India&#39;s most revered Hindu shrines, Yamunotri,
                     Gangotri, Kedarnath & Badrinath. This pilgrim circuit is considered the most auspicious and blissful
                     by all Hindu devotees.
                   </p>
@@ -316,7 +316,7 @@ export default function ChardhamHelicopterTourPage() {
                             <li>
                               • Guests shall be received and escorted to the hotel for check-in upon arrival at
                               Kedarnath and later shall be taken to Kedarnath Temple for darshan. Post darshan back to
-                              the hotel for a night's stay.
+                              the hotel for a night&#39;s stay.
                             </li>
                             <li>• Evening optional guided tour of Bhairon Mandir – Overnight Kedarnath.</li>
                           </>
@@ -371,7 +371,7 @@ export default function ChardhamHelicopterTourPage() {
               >
                 <div className="space-y-2">
                   <h2 className="text-2xl font-bold text-[#00A7B5]">Tour Inclusions</h2>
-                  <p>What's included in your Chardham Helicopter Tour package.</p>
+                  <p>What&#39;s included in your Chardham Helicopter Tour package.</p>
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2">
@@ -531,7 +531,7 @@ export default function ChardhamHelicopterTourPage() {
                                 </li>
                                 <li>
                                   • Passengers are taken on board depending upon the load, weather, temperature
-                                  conditions, etc and the pilot's call shall be final.
+                                  conditions, etc and the pilot&#39;s call shall be final.
                                 </li>
                                 <li>• The total weight of all passengers on board must be within this limit.</li>
                                 <li>

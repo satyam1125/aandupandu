@@ -1,7 +1,6 @@
 "use client";
 
 import { Layout } from "@/components/layout"
-import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Clock, Calendar, MapPin, CheckCircle2, AlertCircle, Phone, Mail } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -280,7 +279,7 @@ export default function AmarnathHelicopterTourPage() {
               >
                 <div className="space-y-2">
                   <h2 className="text-2xl font-bold text-[#00A7B5]">Tour Inclusions</h2>
-                  <p>What's included in your Amarnath Helicopter Tour package.</p>
+                  <p>What&#39;s included in your Amarnath Helicopter Tour package.</p>
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2">

@@ -69,7 +69,7 @@ export const SparklesCore = ({
                   enable: true,
                   mode: "repulse",
                 },
-                resize: true as any,
+                resize: { enable: true },
               },
               modes: {
                 push: {

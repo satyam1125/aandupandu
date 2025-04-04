@@ -1,7 +1,6 @@
 "use client";
 
 import { Layout } from "@/components/layout"
-import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Clock, Calendar, MapPin, CheckCircle2, AlertCircle, Phone, Mail } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -295,7 +294,7 @@ export default function DoDhamHelicopterTourPage() {
               >
                 <div className="space-y-2">
                   <h2 className="text-2xl font-bold text-[#00A7B5]">Tour Inclusions</h2>
-                  <p>What's included in your Do Dham Helicopter Tour package.</p>
+                  <p>What&#39;s included in your Do Dham Helicopter Tour package.</p>
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2">
@@ -435,7 +434,7 @@ export default function DoDhamHelicopterTourPage() {
                             {term === "Helicopter Weight Limitation" && (
                               <>
                                 <li>• The maximum weight capacity of the helicopter is 450 kgs (excluding baggage weight).</li>
-                                <li>• Passengers are taken on board depending upon the load, weather, temperature conditions, etc and the pilot's call shall be final.</li>
+                                <li>• Passengers are taken on board depending upon the load, weather, temperature conditions, etc and the pilot&apos;s call shall be final.</li>
                                 <li>• The total weight of all passengers on board must be within this limit.</li>
                                 <li>• Passengers are required to provide their exact weights with heavy clothes at the time of booking.</li>
                               </>
