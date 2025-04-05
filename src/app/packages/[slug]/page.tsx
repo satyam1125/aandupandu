@@ -1,12 +1,16 @@
-"use client"
-
-import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Calendar, Clock, MapPin, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { BookingModal } from "@/components/booking-modal"
 import packagesData from "@/app/data/packages.json"
+import ClientSideBooking from "./client-booking"
+
+// Define the type for the params prop
+interface PackageDetailParams {
+  params: Promise<{
+    slug: string
+  }>
+}
 
 interface PackageItinerary {
   day: string
@@ -26,13 +30,16 @@ interface PackageDetails {
   itinerary: PackageItinerary[]
 }
 
-type Props = {
-  params: { slug: string }
+// Generate static params for dynamic routes
+export async function generateStaticParams() {
+  return Object.keys(packagesData.packages).map((slug) => ({
+    slug,
+  }))
 }
 
-export default function PackageDetail({ params }: Props) {
-  const [bookingModalOpen, setBookingModalOpen] = useState(false)
-  const packageInfo = (packagesData.packages as Record<string, PackageDetails>)[params.slug]
+export default async function PackageDetail({ params }: PackageDetailParams) {
+  const resolvedParams = await params; // Resolve the promise
+  const packageInfo = (packagesData.packages as Record<string, PackageDetails>)[resolvedParams.slug]
 
   if (!packageInfo) {
     return (
@@ -86,12 +93,7 @@ export default function PackageDetail({ params }: Props) {
           <p className="text-lg">{packageInfo.description}</p>
           <div className="text-2xl font-bold text-[#FF8200]">{packageInfo.price}</div>
 
-          <Button
-            className="w-full md:w-auto bg-[#FF8200] hover:bg-[#FF9F1C] text-white"
-            onClick={() => setBookingModalOpen(true)}
-          >
-            Book This Package
-          </Button>
+          <ClientSideBooking packageId={packageInfo.id} />
         </div>
       </div>
 
@@ -123,8 +125,6 @@ export default function PackageDetail({ params }: Props) {
           ))}
         </div>
       </div>
-
-      <BookingModal open={bookingModalOpen} onOpenChange={setBookingModalOpen} defaultPackage={packageInfo.id} />
     </div>
   )
 }

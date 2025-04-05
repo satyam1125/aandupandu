@@ -86,10 +86,11 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
     try {
       const submissionData = {
         ...data,
-        travelDate: data.travelDate.toISOString()
+        date: data.travelDate.toISOString(), // Map travelDate to date
+        travelDate: undefined, // Remove travelDate if necessary
       }
   
-      console.log('Submitting booking:', submissionData) // Add this line
+      console.log('Submitting booking:', submissionData)
       
       await createBooking(submissionData)
       
