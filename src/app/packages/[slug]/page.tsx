@@ -26,15 +26,11 @@ interface PackageDetails {
   itinerary: PackageItinerary[]
 }
 
-interface PageProps {
-  params: {
-    slug: string
-  }
-  searchParams?: Record<string, string | string[] | undefined>
+type Props = {
+  params: { slug: string }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function PackageDetail({ params, searchParams }: PageProps) {
+export default function PackageDetail({ params }: Props) {
   const [bookingModalOpen, setBookingModalOpen] = useState(false)
   const packageInfo = (packagesData.packages as Record<string, PackageDetails>)[params.slug]
 
