@@ -21,7 +21,8 @@ export function MobileNav() {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="bg-white">
+      <SheetContent side="right" className="bg-white w-[80%] max-w-sm px-6 py-8"
+>
         <div className="flex flex-col space-y-4 mt-8">
           <Link
             href="/"
