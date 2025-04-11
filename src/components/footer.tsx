@@ -16,9 +16,9 @@ export function Footer() {
             />
             <span className="font-bold text-[#00A7B5]">Triloki Hospitality</span>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <h1 className="text-sm text-muted-foreground">
             Providing premium travel experiences to sacred destinations since 2010.
-          </p>
+          </h1>
         </div>
         <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
           <div className="space-y-3">
@@ -41,7 +41,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
+          {/* <div className="space-y-3">
             <h3 className="text-sm font-medium text-[#00A7B5]">Packages</h3>
             <ul className="space-y-2">
               <li>
@@ -69,7 +69,7 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="space-y-3">
             <h3 className="text-sm font-medium text-[#00A7B5]">Legal</h3>
             <ul className="space-y-2">
