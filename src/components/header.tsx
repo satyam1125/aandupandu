@@ -23,13 +23,13 @@ export function Header() {
         >
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/T_logo.png"
+              src="/T_logo.png"
               alt="Triloki Hospitality Logo"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               className="rounded-full bg-[#00A7B5] object-cover"
             />
-            <span className="hidden font-bold text-[#00A7B5] sm:inline-block">Triloki Group Tours And Travels</span>
+            <span className="hidden font-bold text-[#00A7B5] text-2xl sm:inline-block">Triloki Group Tours And Travels</span>
           </Link>
         </motion.div>
         <nav className="hidden md:flex gap-6">
@@ -48,9 +48,9 @@ export function Header() {
           <Link href="/#testimonials" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
             Testimonials
           </Link>
-          <Link href="/#contact" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
+          {/* <Link href="/#contact" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
             Contact
-          </Link>
+          </Link> */}
         </nav>
         <div className="flex items-center gap-4">
           <Button

@@ -41,32 +41,6 @@ export default function Home() {
     },
   ]
 
-  // const testimonials = [
-  //   {
-  //     name: "Rajesh Sharma",
-  //     location: "Delhi",
-  //     quote:
-  //       "The Chardham Helicopter Tour was a life-changing experience. The team at Triloki Hospitality took care of everything, making our pilgrimage smooth and comfortable.",
-  //     rating: 5,
-  //     image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
-  //   },
-  //   {
-  //     name: "Priya Patel",
-  //     location: "Mumbai",
-  //     quote:
-  //       "I was amazed by the professionalism and attention to detail. The helicopter service was excellent, and the accommodations were comfortable despite being in remote locations.",
-  //     rating: 5,
-  //     image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
-  //   },
-  //   {
-  //     name: "Suresh Kumar",
-  //     location: "Bangalore",
-  //     quote:
-  //       "As senior citizens, we were worried about the Chardham Yatra, but Triloki Hospitality made it possible for us to complete the pilgrimage comfortably with their helicopter service.",
-  //     rating: 4,
-  //     image: "https://i.pinimg.com/736x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg",
-  //   },
-  // ]
 
   const features = [
     {
@@ -155,7 +129,6 @@ export default function Home() {
       <PackagesSection packageItems={packageItems} />
       <FeaturesSection features={features} />
       <AboutSection />
-      {/* <TestimonialsSection testimonials={testimonials} /> */}
       <ContactSection />
     </Layout>
   )

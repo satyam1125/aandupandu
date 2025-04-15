@@ -8,17 +8,17 @@ export function Footer() {
         <div className="flex-1 space-y-4">
           <div className="flex items-center gap-2">
             <Image
-              src="https://i.pinimg.com/736x/85/ed/fa/85edfa82040e541abd7b997b4ab5a3b4.jpg"
+              src="/T_logo.png"
               alt="Triloki Hospitality Logo"
-              width={32}
-              height={32}
+              width={60}
+              height={60}
               className="rounded-full bg-[#00A7B5] object-cover"
             />
-            <span className="font-bold text-[#00A7B5]">Triloki Hospitality</span>
+            <span className="font-bold text-[#00A7B5] text-3xl">Triloki Group Tours and Travels</span>
           </div>
-          <h1 className="text-sm text-muted-foreground">
-            Providing premium travel experiences to sacred destinations since 2010.
-          </h1>
+          <h1 className="text-sm text-muted-foreground max-w-lg leading-relaxed text-center">
+          Triloki Groups is a trusted travel agency with over 10 years of experience in organizing spiritual journeys. We specialize in the sacred Char Dham Yatra, offering well-planned, safe, and spiritually enriching pilgrimages. Our commitment to service, comfort, and devotion has made us a preferred choice for thousands of devotees across India.
+  </h1>
         </div>
         <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
           <div className="space-y-3">
@@ -41,35 +41,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          {/* <div className="space-y-3">
-            <h3 className="text-sm font-medium text-[#00A7B5]">Packages</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/packages/chardham-helicopter-tour"
-                  className="text-sm text-muted-foreground hover:text-[#FF8200]"
-                >
-                  Chardham Helicopter Tour
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/packages/do-dham-helicopter-tour"
-                  className="text-sm text-muted-foreground hover:text-[#FF8200]"
-                >
-                  Do Dham Helicopter Tour
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/packages/kedarnath-helicopter-tour"
-                  className="text-sm text-muted-foreground hover:text-[#FF8200]"
-                >
-                  Kedarnath Helicopter Tour
-                </Link>
-              </li>
-            </ul>
-          </div> */}
           <div className="space-y-3">
             <h3 className="text-sm font-medium text-[#00A7B5]">Legal</h3>
             <ul className="space-y-2">

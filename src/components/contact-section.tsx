@@ -42,7 +42,7 @@ export function ContactSection() {
             </div>
             <div className="mt-8">
               <Image
-                src="https://photos.hotelbeds.com/giata/original/90/901775/901775a_hb_a_013.jpg"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/1c/82/8a/new-satyam-swagat.jpg?w=2100&h=1300&s=1"
                 alt="Triloki Hospitality Office"
                 width={500}
                 height={300}

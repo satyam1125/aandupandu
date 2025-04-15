@@ -22,7 +22,7 @@ export default function ChardhamHelicopterTourPage() {
               className="flex flex-col justify-center space-y-4"
             >
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-[#00A7B5]">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none text-[#00A7B5]">
                   Chardham Helicopter Tour
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">

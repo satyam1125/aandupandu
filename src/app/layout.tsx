@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Toaster } from "sonner"
 import "./globals.css"
 
@@ -10,8 +10,13 @@ export const metadata: Metadata = {
   generator: "Next.js",
   keywords: ["Chardham Yatra", "Helicopter Tour", "Kedarnath", "Badrinath", "Uttarakhand", "Travel"],
   authors: [{ name: "Triloki Hospitality" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
+}
+
+// ✅ NEW EXPORT: this replaces the deprecated `viewport` inside metadata
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -32,4 +37,3 @@ export default function RootLayout({
     </html>
   )
 }
-
