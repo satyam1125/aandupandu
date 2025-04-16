@@ -13,7 +13,8 @@ const nextConfig = {
       'dynamic-media-cdn.tripadvisor.com',
       'images.bhaskarassets.com',
       'photos.hotelbeds.com',
-      'cloud.appwrite.io'
+      'cloud.appwrite.io',
+      'img.icons8.com', // Add this line
     ],
   },
   async headers() {

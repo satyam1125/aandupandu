@@ -1,6 +1,7 @@
 import type { ReactNode } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 interface LayoutProps {
   children: ReactNode
@@ -12,6 +13,8 @@ export function Layout({ children }: LayoutProps) {
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
     </div>
   )
 }
