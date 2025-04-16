@@ -32,7 +32,7 @@ export function HeroSection() {
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-[#B0D8DF]/30 via-white to-[#FFCC00]/10 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://i.pinimg.com/1200x/15/9d/df/159ddfefceff6438714f2af232c2716a.jpg"
+          src="https://i.pinimg.com/474x/4e/2f/1e/4e2f1edfda654339d1217d30d910bcae.jpg"
           alt="Chardham Background"
           fill
           className="object-cover opacity-10"
