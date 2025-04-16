@@ -5,6 +5,7 @@ import { supabase } from '../../../lib/auth';
 interface BookingFormData {
   name: string;
   email: string;
+  // Ensure email is a string
   phone: string;
   package: string;
   date: string; // This is coming from your form as 'date'
