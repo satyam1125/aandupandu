@@ -4,10 +4,8 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
-import { CalendarIcon, Loader2 } from "lucide-react"
-import { format } from "date-fns"
+import {  Loader2 } from "lucide-react"
 import { toast } from "sonner"
-import { cn } from "../../lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -21,9 +19,9 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Calendar } from "@/components/ui/calendar"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { createBooking } from "@/app/actions/booking-actions"
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 // Zod schema for form validation
 const formSchema = z.object({
@@ -193,37 +191,25 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
 
               {/* Travel Date Picker */}
               <FormField
-                control={form.control}
-                name="travelDate"
-                render={({ field }) => (
-                  <FormItem className="flex flex-col">
-                    <FormLabel>Travel Date</FormLabel>
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <FormControl>
-                          <Button
-                            variant={"outline"}
-                            className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}
-                          >
-                            {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                          </Button>
-                        </FormControl>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                          mode="single"
-                          selected={field.value}
-                          onSelect={field.onChange}
-                          disabled={(date) => date < new Date()}
-                          initialFocus
-                        />
-                      </PopoverContent>
-                    </Popover>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+  control={form.control}
+  name="travelDate"
+  render={({ field }) => (
+    <FormItem className="flex flex-col">
+      <FormLabel>Travel Date</FormLabel>
+      <FormControl>
+        <ReactDatePicker
+          selected={field.value}
+          onChange={(date) => field.onChange(date)} // Update the form field value
+          minDate={new Date()} // Disable past dates
+          placeholderText="Pick a date"
+          dateFormat="PPP" // Format the displayed date
+          className="w-full border border-gray-300 rounded-md p-2"
+        />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
               {/* Number of People Select */}
               <FormField
