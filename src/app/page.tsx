@@ -14,7 +14,7 @@ export default function Home() {
       description:
         "Experience the divine Chardham Yatra (Yamunotri, Gangotri, Kedarnath & Badrinath) in comfort with our premium helicopter service.",
       duration: "5 Nights / 6 Days",
-      image: "/images/4dhamtour.jpg",
+      image: "/images/helicopter.jpg",
       href: "/packages/chardham-helicopter-tour",
     },
     {
@@ -22,6 +22,7 @@ export default function Home() {
       description:
         "Visit the sacred shrines of Kedarnath and Badrinath with our exclusive helicopter service for a spiritually enriching experience.",
       duration: "3 Nights / 4 Days",
+    
       image: "https://i.pinimg.com/736x/5e/22/98/5e2298868c5b425c71b929d63b7f8509.jpg",
       href: "/packages/do-dham-helicopter-tour",
     },
