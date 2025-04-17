@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { MapPin, Phone, Mail, Calendar } from "lucide-react"
-import { ContactForm } from "@/components/contact-form"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { MapPin, Phone, Mail, Calendar } from "lucide-react";
+import { ContactForm } from "@/components/contact-form";
+import { motion } from "framer-motion";
 
 export function ContactSection() {
   return (
@@ -25,7 +25,14 @@ export function ContactSection() {
             <div className="grid gap-4">
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-[#FF8200]" />
-                <span>Hotel Satyam Swagat, Uchapul Aryanagar, Jwalapur, Haridwar</span>
+                <a
+                  href="https://www.google.com/maps/place/OYO+Hotel+Satyam+Swagat/@29.9228372,78.1124992,17z/data=!3m1!4b1!4m9!3m8!1s0x390947c2a63dd281:0x7f1c094fea231f6a!5m2!4m1!1i2!8m2!3d29.9228326!4d78.1150741!16s%2Fg%2F11gn263v8g?authuser=0&entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-[#FF8200]"
+                >
+                  Hotel Satyam Swagat, Uchapul Aryanagar, Jwalapur, Haridwar
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-[#FF8200]" />
@@ -62,6 +69,6 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
