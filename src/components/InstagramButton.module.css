@@ -1,0 +1,12 @@
+.instagramFloat {
+    position: fixed;
+    bottom: 80px; /* Adjust to avoid overlap with WhatsApp button */
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.instagramFloat:hover {
+    transform: scale(1.1);
+}

@@ -2,6 +2,7 @@ import type { ReactNode } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import WhatsAppButton from "@/components/WhatsAppButton";
+import InstagramButton from "@/components/InstagramButton";
 
 interface LayoutProps {
   children: ReactNode
@@ -13,8 +14,9 @@ export function Layout({ children }: LayoutProps) {
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
-      {/* WhatsApp Floating Button */}
+      {/* Floating Buttons */}
       <WhatsAppButton />
+      <InstagramButton />
     </div>
   )
 }
