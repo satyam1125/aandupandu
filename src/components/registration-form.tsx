@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
 import { Toaster } from "sonner"
@@ -176,21 +175,17 @@ export function RegistrationForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Number of People</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger className="border-[#00A7B5] focus:ring-[#FF8200]">
-                        <SelectValue placeholder="Select number of people" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value="1">1 Person</SelectItem>
-                      <SelectItem value="2">2 People</SelectItem>
-                      <SelectItem value="3">3 People</SelectItem>
-                      <SelectItem value="4">4 People</SelectItem>
-                      <SelectItem value="5">5 People</SelectItem>
-                      <SelectItem value="6">6 People</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <FormControl>
+                    <Input
+                      type="number"
+                      min={1}
+                      max={100} // Adjust the maximum limit as needed
+                      placeholder="Enter number of people"
+                      {...field}
+                      className="border-[#00A7B5] focus-visible:ring-[#FF8200] appearance-none" // Removed arrow with `appearance-none`
+                      required // Makes the field compulsory
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
