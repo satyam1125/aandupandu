@@ -45,9 +45,9 @@ export function Header() {
           <Link href="/#about" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
             About Us
           </Link>
-          <Link href="/#testimonials" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
+          {/* <Link href="/#testimonials" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
             Testimonials
-          </Link>
+          </Link> */}
           {/* <Link href="/#contact" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
             Contact
           </Link> */}
