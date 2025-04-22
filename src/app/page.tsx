@@ -37,8 +37,15 @@ export default function Home() {
       title: "Road-based Chardham Yatra",
       description: "Experience the traditional Chardham Yatra by road, taking in the scenic beauty of the Himalayas.",
       duration: "10 Nights / 11 Days",
-      image: "https://i.pinimg.com/736x/68/c8/3e/68c83e329865148545590b68e809ca18.jpg",
+      image: "https://i.pinimg.com/736x/25/ca/67/25ca6756849cc377354ad06b48f13560.jpg",
       href: "/packages/road-chardham-yatra",
+    },
+    {
+      title: "Leh Ladakh Tour",
+      description: "Experience the traditional Chardham Yatra by road, taking in the scenic beauty of the Himalayas.",
+      duration: "5 Nights / 6 Days",
+      image: "https://i.pinimg.com/474x/b3/18/80/b318802d8b68969d37b9f44a9519b7ef.jpg",
+      href: "/packages/leh-ladakh-tour",
     },
   ]
 

@@ -190,7 +190,64 @@
             "description": "Drive back to Haridwar, departure."
           }
         ]
-      }
+      },
+      "leh-ladakh-tour": {
+  "id": "leh-ladakh",
+  "title": "Leh Ladakh Tour",
+  "description": "Explore the breathtaking landscapes of Leh Ladakh with our exclusive tour package, offering adventure and serenity.",
+  "duration": "6 Nights / 7 Days",
+  "image": "https://i.pinimg.com/736x/dd/5c/a0/dd5ca0db69003e5e988ff10ee400b18c.jpg",
+  "price": "₹65,000 per person",
+  "locations": [
+    "Leh",
+    "Nubra Valley",
+    "Pangong Lake",
+    "Khardung La Pass"
+  ],
+  "highlights": [
+    "Visit the stunning Pangong Lake",
+    "Drive through Khardung La Pass, one of the highest motorable roads",
+    "Explore the serene Nubra Valley",
+    "Experience the unique culture of Leh"
+  ],
+  "itinerary": [
+    {
+      "day": "Day 1",
+      "title": "Arrival in Leh",
+      "description": "Arrive at Leh airport, acclimatize to the altitude, and explore the local market."
+    },
+    {
+      "day": "Day 2",
+      "title": "Leh Local Sightseeing",
+      "description": "Visit Shanti Stupa, Leh Palace, and the Hall of Fame Museum."
+    },
+    {
+      "day": "Day 3",
+      "title": "Leh to Nubra Valley",
+      "description": "Drive to Nubra Valley via Khardung La Pass, visit Diskit Monastery, and enjoy a camel ride."
+    },
+    {
+      "day": "Day 4",
+      "title": "Nubra Valley to Pangong Lake",
+      "description": "Drive to Pangong Lake, enjoy the stunning views, and overnight stay."
+    },
+    {
+      "day": "Day 5",
+      "title": "Pangong Lake to Leh",
+      "description": "Drive back to Leh, visit Hemis and Thiksey Monasteries en route."
+    },
+    {
+      "day": "Day 6",
+      "title": "Leh Exploration",
+      "description": "Explore local attractions and shop for souvenirs."
+    },
+    {
+      "day": "Day 7",
+      "title": "Departure from Leh",
+      "description": "Transfer to Leh airport for departure."
+    }
+  ]
+}
     }
   }
   
