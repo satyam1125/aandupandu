@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RegistrationForm } from "@/components/registration-form"
 import { motion } from "framer-motion"
 
-export default function AmarnathHelicopterTourPage() {
+export default function LehladakhtourTourPage() {
   return (
     <Layout>
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-[#B0D8DF]/20 to-white">
@@ -26,7 +26,7 @@ export default function AmarnathHelicopterTourPage() {
                   Leh ladakh tour package
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Experience the divine pilgrimage to the holy Amarnath Cave with our premium helicopter service, offering comfort and convenience.
+                Explore the breathtaking landscapes of Leh Ladakh with our exclusive tour package, offering adventure and serenity.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">

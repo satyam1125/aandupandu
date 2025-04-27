@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       title: "Amarnath Helicopter Tour",
-      description: "Reach the holy shrine of Kedarnath quickly and comfortably with our dedicated helicopter service.",
+      description: "Experience the divine pilgrimage to the holy Amarnath Cave with our premium helicopter service, offering comfort and convenience.",
       duration: "2 Nights / 3 Days",
       image: "https://i.pinimg.com/736x/6c/5a/de/6c5adefe98ece43b5ba6797a043ecf70.jpg",
       href: "/packages/amarnath-helicopter-tour",
@@ -42,7 +42,7 @@ export default function Home() {
     },
     {
       title: "Leh Ladakh Tour",
-      description: "Experience the traditional Chardham Yatra by road, taking in the scenic beauty of the Himalayas.",
+      description: "Explore the breathtaking landscapes of Leh Ladakh with our exclusive tour package, offering adventure and serenity.",
       duration: "5 Nights / 6 Days",
       image: "https://i.pinimg.com/474x/b3/18/80/b318802d8b68969d37b9f44a9519b7ef.jpg",
       href: "/packages/leh-ladakh-tour",

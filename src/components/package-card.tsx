@@ -34,14 +34,14 @@ export function PackageCard({ title, description, duration, image, href }: Packa
 
       {/* Title / Header */}
       <CardHeader className="p-4 pb-2">
-        <CardTitle className="text-lg font-semibold text-[#00A7B5] group-hover:text-[#FF8200] transition-colors">
+        <CardTitle className="text-xl font-black text-[#00A7B5] group-hover:text-[#FF8200] transition-colors tracking-widest uppercase drop-shadow-md">
           {title}
         </CardTitle>
       </CardHeader>
 
       {/* Description / Content */}
       <CardContent className="px-4 pb-4">
-        <p className="line-clamp-3 text-sm text-muted-foreground">
+        <p className="line-clamp-3 text-sm text-muted-foreground italic font-medium">
           {description}
         </p>
         
