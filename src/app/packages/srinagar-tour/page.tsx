@@ -39,8 +39,8 @@ export default function SrinagarTourPage() {
         <div className="relative h-[400px] rounded-xl overflow-hidden mb-12">
           <div className="absolute inset-0 bg-black/20 z-10"></div>
           <Image
-            src="/images/kashmir.png"
-            alt="Srinagar Tour"
+            src="https://i.pinimg.com/1200x/11/9f/f8/119ff87bf41ec80a34af37b20917401f.jpg"
+            alt="Srinagar Tour - Dal Lake Kashmir"
             fill
             className="object-cover brightness-110 contrast-110 saturate-110"
             priority

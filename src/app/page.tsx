@@ -12,7 +12,7 @@ export default function Home() {
       title: "Kashmir Valley Escape Package",
       description: "Experience the serene beauty of Kashmir with houseboat stays, Mughal gardens, and Dal Lake exploration.",
       duration: "4 Nights / 5 Days",
-      image: "/images/kashmir.png",
+      image: "https://i.pinimg.com/1200x/11/9f/f8/119ff87bf41ec80a34af37b20917401f.jpg",
       href: "/packages/srinagar-tour",
     },
     {
