@@ -7,23 +7,35 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect"
 export function HeroSection() {
   const words = [
     {
-      text: "Experience",
+      text: "Discover",
       className: "text-[#FF8200]",
     },
     {
-      text: "the",
+      text: "India's",
       className: "text-[#FF8200]",
     },
     {
-      text: "Divine",
+      text: "Spiritual",
       className: "text-[#FF8200]",
     },
     {
-      text: "Chardham",
+      text: "Heartlands",
       className: "text-[#FF8200]",
     },
     {
-      text: "Yatra",
+      text: "with",
+      className: "text-[#FF8200]",
+    },
+    {
+      text: "Ease",
+      className: "text-[#FF8200]",
+    },
+    {
+      text: "and",
+      className: "text-[#FF8200]",
+    },
+    {
+      text: "Grace",
       className: "text-[#FF8200]",
     },
   ]
@@ -38,9 +50,9 @@ export function HeroSection() {
           className="object-cover opacity-10"
         />
       </div>
-      <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div className="flex flex-col justify-center space-y-4">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+          <div className="flex flex-col justify-center space-y-4 flex-1">
             <div className="space-y-2">
               <div className="py-4">
                 <TypewriterEffect
@@ -49,23 +61,20 @@ export function HeroSection() {
                 />
               </div>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                Embark on a spiritual journey to the sacred Chardham destinations with our premium helicopter services.
-                Visit Yamunotri, Gangotri, Kedarnath, and Badrinath with ease and comfort.
+                We guide travelers through India`s sacred landscapes — where mountains, temples, and ancient traditions meet. This journey is more than travel; it`s a calling.
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              
-<div className="flex justify-center">
-  <Link
-    href="/packages/chardham-helicopter-tour"
-    className="flex items-center justify-center w-full max-w-xs px-5 py-2 bg-blue-500 text-white rounded-md"
-  >
-    Book Chardham Tour
-    <ChevronRight className="ml-2 h-4 w-4 inline" />
-  </Link>
-</div>
-
-              
+            <div className="flex flex-col gap-2 min-[400px]:flex-row items-start">
+              <Button
+                size="lg"
+                asChild
+                className="bg-[#00A7B5] hover:bg-[#00A7B5]/90 text-white"
+              >
+                <Link href="/packages/chardham-helicopter-tour" className="inline-flex items-center">
+                  Book Chardham Tour
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
               <Button
                 variant="outline"
                 size="lg"
@@ -90,7 +99,7 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square">
+          <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square flex-1 flex justify-center items-center">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00A7B5]/20 to-[#FF8200]/20 rounded-xl"></div>
             <video 
               src="/images/chardham.mp4" 
@@ -98,7 +107,7 @@ export function HeroSection() {
               loop 
               muted 
               playsInline 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-xl"
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -119,4 +120,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
 }

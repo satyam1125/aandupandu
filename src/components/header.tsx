@@ -29,7 +29,7 @@ export function Header() {
               height={60}
               className="rounded-full bg-[#00A7B5] object-cover"
             />
-            <span className="hidden font-bold text-[#00A7B5] text-2xl sm:inline-block">Triloki Group Tours And Travels</span>
+            <span className="font-cinzel font-semibold text-[32px] md:text-[44px] text-[#00A7B5]">Triloki Divine Journey</span>
           </Link>
         </motion.div>
         <nav className="hidden md:flex gap-6">
@@ -66,7 +66,7 @@ export function Header() {
           </Button>
           <Button
             size="sm"
-            className="bg-[#FF8200] hover:bg-[#FF9F1C] text-white"
+            className="hidden md:flex bg-[#FF8200] hover:bg-[#FF9F1C] text-white"
             onClick={() => setBookingModalOpen(true)}
           >
             Book Now
