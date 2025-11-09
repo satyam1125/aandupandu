@@ -16,9 +16,9 @@ export function PackageCard({ title, description, duration, image, href }: Packa
   
 
   return (
-    <Card className="group overflow-hidden transition-shadow hover:shadow-lg rounded-lg border border-gray-200 p-0">
+    <Card className="group overflow-hidden transition-shadow hover:shadow-lg rounded-lg border border-gray-200 p-0 max-w-full">
       {/* Image at the very top, flush with no top padding */}
-      <div className="relative h-52 w-full">
+      <div className="relative h-28 sm:h-32 md:h-40 w-full">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
@@ -33,26 +33,26 @@ export function PackageCard({ title, description, duration, image, href }: Packa
       </div>
 
       {/* Title / Header */}
-      <CardHeader className="p-4 pb-2">
-        <CardTitle className="text-xl font-black text-[#00A7B5] group-hover:text-[#FF8200] transition-colors tracking-widest uppercase drop-shadow-md">
+      <CardHeader className="p-2 pb-1">
+        <CardTitle className="text-xs sm:text-sm md:text-base lg:text-lg font-black text-[#00A7B5] group-hover:text-[#FF8200] transition-colors tracking-widest uppercase drop-shadow-md line-clamp-2">
           {title}
         </CardTitle>
       </CardHeader>
 
       {/* Description / Content */}
-      <CardContent className="px-4 pb-4">
-        <p className="line-clamp-3 text-sm text-muted-foreground italic font-medium">
+      <CardContent className="px-2 pb-1">
+        <p className="line-clamp-2 text-xs text-muted-foreground italic font-medium">
           {description}
         </p>
         
       </CardContent>
 
       {/* Footer / CTA */}
-      <CardFooter className="px-4 pb-4">
-        <Button asChild className="w-full bg-[#FF8200] hover:bg-[#FF9F1C] text-white">
+      <CardFooter className="px-2 pb-2">
+        <Button asChild className="w-full bg-[#FF8200] hover:bg-[#FF9F1C] text-white text-xs py-1.5">
           <Link href={href}>
             View Details
-            <ChevronRight className="ml-2 h-4 w-4" />
+            <ChevronRight className="ml-1 h-3 w-3" />
           </Link>
         </Button>
       </CardFooter>

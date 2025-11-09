@@ -20,7 +20,7 @@ export function PackagesSection({ packageItems }: PackagesSectionProps) {
   return (
     <section id="packages" className="py-12 md:py-24 lg:py-32 relative">
       <BackgroundBeams className="opacity-20" />
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="relative">
@@ -56,7 +56,7 @@ export function PackagesSection({ packageItems }: PackagesSectionProps) {
             </motion.p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-12 py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 py-12 w-full">
           {packageItems.map((pkg, index) => (
             <motion.div
               key={index}
@@ -64,6 +64,7 @@ export function PackagesSection({ packageItems }: PackagesSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="w-full"
             >
               <PackageCard
                 title={pkg.title}

@@ -10,6 +10,13 @@ import Image from "next/image"
 export default function Home() {
   const packageItems = [
     {
+      title: "Kashmir Valley Escape Package",
+      description: "Experience the traditional Chardham Yatra by road, taking in the scenic beauty of the Himalayas.",
+      duration: "4 Nights / 5 Days",
+      image: "/images/kashmir.png",
+      href: "/packages/srinagar-tour",
+    },
+    {
       title: "Chardham Helicopter Tour",
       description:
         "Experience the divine Chardham Yatra (Yamunotri, Gangotri, Kedarnath & Badrinath) in comfort with our premium helicopter service.",
