@@ -1,4 +1,3 @@
-
 import { Layout } from "@/components/layout"
 import { HeroSection } from "@/components/hero-section"
 import { PackagesSection } from "@/components/packages-section"
@@ -11,7 +10,7 @@ export default function Home() {
   const packageItems = [
     {
       title: "Kashmir Valley Escape Package",
-      description: "Experience the traditional Chardham Yatra by road, taking in the scenic beauty of the Himalayas.",
+      description: "Experience the serene beauty of Kashmir with houseboat stays, Mughal gardens, and Dal Lake exploration.",
       duration: "4 Nights / 5 Days",
       image: "/images/kashmir.png",
       href: "/packages/srinagar-tour",
@@ -29,7 +28,6 @@ export default function Home() {
       description:
         "Visit the sacred shrines of Kedarnath and Badrinath with our exclusive helicopter service for a spiritually enriching experience.",
       duration: "3 Nights / 4 Days",
-    
       image: "https://i.pinimg.com/736x/5e/22/98/5e2298868c5b425c71b929d63b7f8509.jpg",
       href: "/packages/do-dham-helicopter-tour",
     },
