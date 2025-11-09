@@ -29,7 +29,7 @@ export function Header() {
               height={60}
               className="rounded-full bg-[#00A7B5] object-cover"
             />
-            <span className="font-cinzel font-semibold text-[32px] md:text-[44px] text-[#00A7B5]">Triloki Divine Journey</span>
+            <span className="font-cinzel font-semibold text-[18px] sm:text-[28px] md:text-[44px] text-[#00A7B5] whitespace-nowrap">Triloki Divine Journey</span>
           </Link>
         </motion.div>
         <nav className="hidden md:flex gap-6">
