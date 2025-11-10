@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer"
 import { AnnouncementBar } from "@/components/announcement-bar"
 import WhatsAppButton from "@/components/WhatsAppButton";
 import InstagramButton from "@/components/InstagramButton";
+import CallButton from "@/components/CallButton";
 
 interface LayoutProps {
   children: ReactNode
@@ -19,6 +20,7 @@ export function Layout({ children }: LayoutProps) {
       {/* Floating Buttons */}
       <WhatsAppButton />
       <InstagramButton />
+      <CallButton />
     </div>
   )
 }

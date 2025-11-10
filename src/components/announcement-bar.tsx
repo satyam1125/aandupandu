@@ -2,18 +2,19 @@
 
 export function AnnouncementBar() {
   const announcements = [
-    "🕉️ Kedarnath 2026 Booking Started @₹21,500 per person",
-    "🏔️ Srinagar Booking Started @₹8,000 per person",
-    "🚁 Vaishno Devi with Helicopter @₹13,499 per person",
+    "Kashmir Bookings Open!                     ",
+    "(2026) Kedarnath Helicopter Bookings Open!                     ",
+    "Vaishno Devi Bookings Open!                     ",
   ]
 
-  const scrollingText = announcements.join("   •   ") + "   •   "
+  // Add significant spacing for a clear separation
+  const scrollingText = announcements.join(" \u00A0\u00A0\u00A0 | \u00A0\u00A0\u00A0 ") + " \u00A0\u00A0\u00A0 | \u00A0\u00A0\u00A0 "
 
   return (
-    <div className="w-full bg-gradient-to-r from-[#fff4d6] via-[#ffe5b4] to-[#fff4d6] border-b border-[#ffb84c] overflow-hidden relative">
+    <div className="w-full bg-gradient-to-r from-red-600 via-red-700 to-red-600 border-b-2 border-red-800 overflow-hidden relative shadow-lg">
       <div className="announcement-container">
         <div className="announcement-text">
-          {scrollingText.repeat(3)}
+          {scrollingText.repeat(5)}
         </div>
       </div>
       <style jsx>{`
@@ -29,10 +30,11 @@ export function AnnouncementBar() {
         .announcement-text {
           display: inline-block;
           padding-left: 100%;
-          font-weight: 600;
-          font-size: 14px;
-          color: #d97706;
-          animation: scrollText 30s linear infinite;
+          font-weight: 700;
+          font-size: 15px;
+          color: white;
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+          animation: scrollText 40s linear infinite;
         }
 
         @keyframes scrollText {
@@ -40,13 +42,14 @@ export function AnnouncementBar() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-20%);
           }
         }
 
         @media (max-width: 768px) {
           .announcement-text {
-            font-size: 12px;
+            font-size: 13px;
+            animation-duration: 30s;
           }
         }
       `}</style>

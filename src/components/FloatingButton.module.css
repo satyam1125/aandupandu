@@ -1,0 +1,36 @@
+.floatingButton {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  color: white;
+}
+
+.floatingButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.whatsappButton {
+  background-color: #25D366;
+  right: 20px;
+  bottom: 90px;
+}
+
+.instagramButton {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  right: 20px;
+  bottom: 160px;
+}
+
+.callButton {
+  background-color: #007BFF;
+  right: 20px;
+  bottom: 230px;
+}

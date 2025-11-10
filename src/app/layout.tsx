@@ -1,39 +1,23 @@
 import type React from "react"
-import type { Metadata, Viewport } from "next"
-import { Toaster } from "sonner"
+import type { Metadata } from "next"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Triloki Hospitality - Premium Travel Services",
+  title: "Triloki Divine Journey - Spiritual Tours & Travel",
   description:
-    "Experience divine journeys with Triloki Hospitality. Premium helicopter services for Chardham Yatra and other sacred destinations in Uttarakhand.",
-  generator: "Next.js",
-  keywords: ["Chardham Yatra", "Helicopter Tour", "Kedarnath", "Badrinath", "Uttarakhand", "Travel"],
-  authors: [{ name: "Triloki Hospitality" }],
-  robots: "index, follow",
-}
-
-// ✅ NEW EXPORT: this replaces the deprecated `viewport` inside metadata
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
+    "Explore India's sacred destinations with Triloki Divine Journey. We offer curated Chardham, Kashmir, and other spiritual tour packages with helicopter services and luxury accommodations.",
 }
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon" />
-        <meta name="theme-color" content="#00A7B5" />
-      </head>
-      <body>
-        {children}
-        <Toaster position="top-center" richColors />
-      </body>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }

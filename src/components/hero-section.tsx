@@ -44,7 +44,7 @@ export function HeroSection() {
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-[#B0D8DF]/30 via-white to-[#FFCC00]/10 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://i.pinimg.com/736x/b2/95/27/b295273c2445cfbb33805bf81a2f40b6.jpg"
+          src="https://i.pinimg.com/736x/3f/72/36/3f7236f7cb5deb545e24bd65eb307438.jpg"
           alt="Chardham Background"
           fill
           className="object-cover opacity-10"
@@ -70,8 +70,8 @@ export function HeroSection() {
                 asChild
                 className="bg-[#00A7B5] hover:bg-[#00A7B5]/90 text-white"
               >
-                <Link href="/packages/chardham-helicopter-tour" className="inline-flex items-center">
-                  Book Chardham Tour
+                <Link href="/packages/srinagar-tour" className="inline-flex items-center">
+                  Book Kashmir Tour
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -102,7 +102,7 @@ export function HeroSection() {
           <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square flex-1 flex justify-center items-center">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00A7B5]/20 to-[#FF8200]/20 rounded-xl"></div>
             <video 
-              src="/images/chardham.mp4" 
+              src="/images/kashmir.mp4" 
               autoPlay 
               loop 
               muted 

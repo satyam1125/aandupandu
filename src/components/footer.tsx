@@ -1,81 +1,74 @@
 import Link from "next/link"
 import Image from "next/image"
+import { Facebook, Instagram, Twitter } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="border-t bg-white">
-      <div className="container mx-auto flex flex-col gap-4 py-10 px-4 md:px-6 md:flex-row md:gap-8">
-        <div className="flex-1 space-y-4">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/T_logo.png"
-              alt="Triloki Hospitality Logo"
-              width={60}
-              height={60}
-              className="rounded-full bg-[#00A7B5] object-cover"
-            />
-            <span className="font-bold text-[#00A7B5] text-3xl">Triloki Group Tours and Travels</span>
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 md:px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* About */}
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/T_logo.png"
+                alt="Triloki Divine Journey Logo"
+                width={40}
+                height={40}
+                className="rounded-full bg-[#00A7B5]"
+              />
+              <span className="font-cinzel font-semibold text-xl text-white">Triloki Divine Journey</span>
+            </Link>
+            <p className="text-sm text-gray-400">
+              Your trusted partner in spiritual travel, offering curated journeys to India’s most sacred destinations.
+            </p>
           </div>
-          <h1 className="text-sm text-muted-foreground max-w-lg leading-relaxed text-center">
-          Triloki Groups is a trusted travel agency with over 10 years of experience in organizing spiritual journeys. We specialize in the sacred Char Dham Yatra, offering well-planned, safe, and spiritually enriching pilgrimages. Our commitment to service, comfort, and devotion has made us a preferred choice for thousands of devotees across India.
-  </h1>
-        </div>
-        <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
-          <div className="space-y-3">
-            <h3 className="text-sm font-medium text-[#00A7B5]">Company</h3>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <Link href="#about" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                  Careers
-                </Link>
-              </li>
+              <li><Link href="/#packages" className="text-sm text-gray-400 hover:text-white">Packages</Link></li>
+              <li><Link href="/#about" className="text-sm text-gray-400 hover:text-white">About Us</Link></li>
+              <li><Link href="/#contact" className="text-sm text-gray-400 hover:text-white">Contact</Link></li>
+              <li><Link href="/terms" className="text-sm text-gray-400 hover:text-white">Terms & Conditions</Link></li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <h3 className="text-sm font-medium text-[#00A7B5]">Legal</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-                  Cancellation Policy
-                </Link>
-              </li>
+
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg">Contact Us</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>Email: hospitality.triloki@gmail.com</li>
+              <li>Phone: +91 8445214371 /  97203 40187</li>
+              <li>Address: Dehradun, Uttarakhand, India</li>
             </ul>
           </div>
+
+          {/* Social Media */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg">Follow Us</h4>
+            <div className="flex space-x-4">
+              <Link href="#" className="text-gray-400 hover:text-white"><Facebook /></Link>
+              <Link href="#" className="text-gray-400 hover:text-white"><Instagram /></Link>
+              <Link href="#" className="text-gray-400 hover:text-white"><Twitter /></Link>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="border-t py-6 bg-[#00A7B5]/5">
-        <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:px-6 md:flex-row">
-          <p className="text-center text-sm text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} Triloki Hospitality. All rights reserved.
+
+        <div className="mt-8 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+          <p>&copy; {new Date().getFullYear()} Triloki Divine Journey. All Rights Reserved.</p>
+          <p className="mt-2">
+            Made and managed by{" "}
+            <a
+              href="https://cryptiqnetworks.software"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white underline"
+            >
+              Cryptiq Networks
+            </a>
           </p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-[#FF8200]">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

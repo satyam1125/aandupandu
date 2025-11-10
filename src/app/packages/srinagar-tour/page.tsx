@@ -91,116 +91,150 @@ export default function SrinagarTourPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
+                  {/* Day 1 */}
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00A7B5] text-white flex items-center justify-center font-bold">
                       1
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Arrival & Check-in in Srinagar</h3>
-                      <ul className="space-y-1 text-muted-foreground">
+                      <h3 className="font-semibold text-lg mb-2">Arrival in Srinagar & Dal Lake Serenity</h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Upon arrival at Srinagar Airport, you&apos;ll be greeted and transferred to your hotel or houseboat. After settling in, we&apos;ll embark on a magical evening on the iconic Dal Lake.
+                      </p>
+                      <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Airport pickup and transfer to hotel</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Airport Pickup & Check-in:</strong> Smooth transfer to your accommodation.</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Welcome refreshments and check-in</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Shikara Ride on Dal Lake:</strong> Glide across the serene waters of Dal Lake, often called &quot;Kashmir&apos;s Jewel.&quot; Spanning 18 sq km, it&apos;s a world of its own with floating gardens, vibrant houseboats, and the majestic Zabarwan mountain range as a backdrop.</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Evening at leisure or optional Shikara ride on Dal Lake</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Nagin Lake Visit:</strong> Explore the quieter, more intimate Nagin Lake, a part of Dal Lake connected by a narrow causeway, perfect for a peaceful swim or simply relaxing.</span>
                         </li>
                       </ul>
                     </div>
                   </div>
 
+                  {/* Day 2 */}
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00A7B5] text-white flex items-center justify-center font-bold">
                       2
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Local Sightseeing – Dal Lake & Mughal Gardens</h3>
-                      <ul className="space-y-1 text-muted-foreground">
+                      <h3 className="font-semibold text-lg mb-2">Mughal Gardens, Pari Mahal & Shankaracharya Temple</h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Discover the grandeur of the Mughal era and witness breathtaking panoramic views of the city from ancient hilltops.
+                      </p>
+                      <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Morning Shikara ride on Dal Lake</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Mughal Gardens Tour:</strong> Visit Nishat Bagh (&quot;Garden of Joy&quot;), Shalimar Bagh (&quot;Abode of Love&quot;), and Chashme Shahi (&quot;The Royal Spring&quot;). These gardens showcase stunning Persian architecture and are located within 10-15 km of the city center.</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Visit Mughal Gardens: Nishat Bagh, Shalimar Bagh, Chashme Shahi</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Tulip Garden (Seasonal):</strong> If visiting between late March and early May, witness Asia`s largest tulip garden in full bloom, a vibrant carpet of colors at the foothills of the Zabarwan range.</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Visit Shankaracharya Temple for panoramic views</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Pari Mahal (The Palace of Fairies):</strong> Explore this seven-terraced garden, once a Buddhist monastery and later a school of astrology. Located above Chashme Shahi, it offers spectacular sunset views over Dal Lake.</span>
+                        </li>
+                         <li className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Shankaracharya Temple:</strong> Perched atop a 1,000-foot hill, this ancient temple dedicated to Lord Shiva provides a 360-degree view of Srinagar and the surrounding valley.</span>
                         </li>
                       </ul>
                     </div>
                   </div>
 
+                  {/* Day 3 */}
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00A7B5] text-white flex items-center justify-center font-bold">
                       3
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Srinagar City Exploration & Markets</h3>
-                      <ul className="space-y-1 text-muted-foreground">
+                      <h3 className="font-semibold text-lg mb-2">Day Trip to Gulmarg – &quot;The Meadow of Flowers&quot;</h3>
+                       <p className="text-sm text-muted-foreground mb-3">
+                        Journey to the stunning alpine valley of Gulmarg, a paradise for nature lovers and adventure seekers, located 50 km (approx. 2 hours) from Srinagar.
+                      </p>
+                      <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Explore local markets and handicraft centers</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Scenic Drive:</strong> Enjoy a picturesque drive through quaint villages and pine forests.</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Shopping for Kashmiri carpets, shawls, and dry fruits</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Gondola Ride (Optional):</strong> Take the world&apos;s second-highest operating cable car up to Apharwat Peak for breathtaking views of the Himalayas and Nanga Parbat.</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Visit Hazratbal Shrine and Jama Masjid</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Leisure & Activities:</strong> Spend the day exploring the lush meadows, enjoying a pony ride, or playing golf at one of the world&apos;s highest courses. Return to Srinagar in the evening.</span>
                         </li>
                       </ul>
                     </div>
                   </div>
 
+                  {/* Day 4 */}
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00A7B5] text-white flex items-center justify-center font-bold">
                       4
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Traditional Houseboat Experience</h3>
-                      <ul className="space-y-1 text-muted-foreground">
+                      <h3 className="font-semibold text-lg mb-2">Day Trip to Sonmarg or Pahalgam (Choose One)</h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Choose your adventure for the day: the golden meadows of Sonmarg or the tranquil valleys of Pahalgam.
+                      </p>
+                      <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Check-in to traditional Kashmiri houseboat on Dal Lake</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Option A: Sonmarg (&quot;Meadow of Gold&quot;):</strong> A 3-hour drive (80 km) takes you to this spectacular valley, the gateway to Ladakh. Famous for the Thajiwas Glacier, where you can enjoy snow activities even in summer.</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Experience authentic Kashmiri hospitality and cuisine</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Option B: Pahalgam (&quot;Valley of Shepherds&quot;):</strong> A 2.5-hour drive (95 km) leads to this serene town on the banks of the Lidder River. Explore Betaab Valley, Aru Valley, and Chandanwari (optional, by local union cab).</span>
                         </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Sunset views from the houseboat deck</span>
+                         <li className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span><strong>Evening:</strong> Return to your houseboat on Dal Lake for an authentic Kashmiri dinner and a memorable overnight stay.</span>
                         </li>
                       </ul>
                     </div>
                   </div>
 
+                  {/* Day 5 */}
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00A7B5] text-white flex items-center justify-center font-bold">
                       5
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Departure</h3>
-                      <ul className="space-y-1 text-muted-foreground">
+                      <h3 className="font-semibold text-lg mb-2">Departure from Srinagar</h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        After a final Kashmiri breakfast, it`s time to head home with cherished memories.
+                      </p>
+                      <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Check-out and transfer to Srinagar Airport</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span>Enjoy a leisurely breakfast on the houseboat.</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5" />
-                          <span>Departure with wonderful memories of Kashmir</span>
+                          <CheckCircle2 className="h-5 w-5 text-[#00A7B5] mt-0.5 flex-shrink-0" />
+                          <span>Check-out and transfer to Srinagar Airport for your onward journey, filled with wonderful memories of Kashmir.</span>
                         </li>
                       </ul>
                     </div>
                   </div>
+                </div>
+                <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <h4 className="font-semibold text-lg mb-2 text-blue-800">Optional Extended Itinerary</h4>
+                  <p className="text-sm text-muted-foreground">
+                    For those with more time, consider extending your stay to explore these incredible destinations:
+                  </p>
+                  <ul className="mt-2 space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                    <li><strong>Gurez Valley:</strong> A remote, breathtakingly beautiful valley near the Line of Control, about 123 km from Srinagar. Requires a minimum of 2 extra days.</li>
+                    <li><strong>Dachigam National Park:</strong> Located 22 km from Srinagar, this park is home to the rare Hangul (Kashmir Stag). Ideal for wildlife enthusiasts.</li>
+                  </ul>
                 </div>
               </CardContent>
             </Card>
@@ -235,13 +269,13 @@ export default function SrinagarTourPage() {
                         </tr>
                         <tr>
                           <td className="border p-3">4 Adults</td>
-                          <td className="border p-3 font-semibold">₹33,000</td>
+                          <td className="border p-3 font-semibold">₹32,999</td>
                           <td className="border p-3 text-[#00A7B5] font-semibold">₹8,250</td>
                         </tr>
                         <tr>
                           <td className="border p-3">4+ Persons</td>
                           <td className="border p-3 font-semibold">Contact Us</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹8,000</td>
+                          <td className="border p-3 text-[#00A7B5] font-semibold">₹7,999</td>
                         </tr>
                       </tbody>
                     </table>
@@ -266,8 +300,8 @@ export default function SrinagarTourPage() {
                       <tbody>
                         <tr>
                           <td className="border p-3">2 Adults</td>
-                          <td className="border p-3 font-semibold">₹30,000</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹15,000</td>
+                          <td className="border p-3 font-semibold">₹29,999</td>
+                          <td className="border p-3 text-[#00A7B5] font-semibold">₹14,999</td>
                         </tr>
                         <tr>
                           <td className="border p-3">4 Adults (Sedan)</td>
@@ -361,7 +395,7 @@ export default function SrinagarTourPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl">Inquiry Form</CardTitle>
-                <CardDescription>Have questions? Send us a message and we`ll get back to you shortly.</CardDescription>
+                <CardDescription>Have questions? Send us a message and we&apos;ll get back to you shortly.</CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
