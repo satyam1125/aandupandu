@@ -29,7 +29,7 @@ export function Header() {
               height={50}
               className="rounded-full bg-[#00A7B5] object-cover"
             />
-            <span className="font-cinzel font-semibold text-3xl text-[#00A7B5] whitespace-nowrap">
+            <span className="font-cinzel font-semibold text-2xl text-[#00A7B5] whitespace-nowrap">
               Triloki Divine Journey
             </span>
           </Link>
