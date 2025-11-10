@@ -2,78 +2,56 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { AnimatePresence, motion } from "framer-motion"
 
 export function MobileNav() {
-  const [open, setOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
-  const handleLinkClick = () => {
-    setOpen(false)
+  const toggleMenu = () => setIsOpen(!isOpen)
+
+  const menuVariants = {
+    closed: { opacity: 0, y: -20 },
+    open: { opacity: 1, y: 0 },
   }
 
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden">
-          <Menu className="h-5 w-5" />
-          <span className="sr-only">Toggle menu</span>
-        </Button>
-      </SheetTrigger>
-      <SheetContent side="right" className="bg-white w-[80%] max-w-sm px-6 py-8"
->
-        <div className="flex flex-col space-y-4 mt-8">
-          <Link
-            href="/"
-            className="text-lg font-medium transition-colors hover:text-[#FF8200]"
-            onClick={handleLinkClick}
+    // The root div no longer has responsive classes like `md:hidden`
+    <div>
+      <Button variant="ghost" onClick={toggleMenu} className="p-2">
+        <Menu className="h-6 w-6" />
+        <span className="sr-only">Open Menu</span>
+      </Button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 bg-white p-6"
           >
-            Home
-          </Link>
-          <Link
-            href="#packages"
-            className="text-lg font-medium transition-colors hover:text-[#FF8200]"
-            onClick={handleLinkClick}
-          >
-            Packages
-          </Link>
-          <Link
-            href="#features"
-            className="text-lg font-medium transition-colors hover:text-[#FF8200]"
-            onClick={handleLinkClick}
-          >
-            Features
-          </Link>
-          <Link
-            href="#about"
-            className="text-lg font-medium transition-colors hover:text-[#FF8200]"
-            onClick={handleLinkClick}
-          >
-            About Us
-          </Link>
-          <Link
-            href="#testimonials"
-            className="text-lg font-medium transition-colors hover:text-[#FF8200]"
-            onClick={handleLinkClick}
-          >
-            Testimonials
-          </Link>
-          <Link
-            href="#contact"
-            className="text-lg font-medium transition-colors hover:text-[#FF8200]"
-            onClick={handleLinkClick}
-          >
-            Contact
-          </Link>
-          <Button asChild className="mt-4 bg-[#FF8200] hover:bg-[#FF9F1C] text-white">
-            <Link href="/packages/chardham-helicopter-tour" onClick={handleLinkClick}>
-              Book Now
-            </Link>
-          </Button>
-        </div>
-      </SheetContent>
-    </Sheet>
+            <div className="flex justify-between items-center mb-8">
+              <span className="font-cinzel font-semibold text-xl text-[#00A7B5]">Menu</span>
+              <Button variant="ghost" onClick={toggleMenu} className="p-2">
+                <X className="h-6 w-6" />
+                <span className="sr-only">Close Menu</span>
+              </Button>
+            </div>
+            <nav className="flex flex-col space-y-6 text-lg">
+              <Link href="/" className="font-medium hover:text-[#FF8200]" onClick={toggleMenu}>Home</Link>
+              <Link href="/#packages" className="font-medium hover:text-[#FF8200]" onClick={toggleMenu}>Packages</Link>
+              <Link href="/#features" className="font-medium hover:text-[#FF8200]" onClick={toggleMenu}>Features</Link>
+              <Link href="/#about" className="font-medium hover:text-[#FF8200]" onClick={toggleMenu}>About Us</Link>
+              <Link href="/#contact" className="font-medium hover:text-[#FF8200]" onClick={toggleMenu}>Contact</Link>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }
 

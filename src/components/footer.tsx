@@ -50,7 +50,7 @@ export function Footer() {
             <h4 className="font-semibold text-lg">Follow Us</h4>
             <div className="flex space-x-4">
               <Link href="#" className="text-gray-400 hover:text-white"><Facebook /></Link>
-              <Link href="#" className="text-gray-400 hover:text-white"><Instagram /></Link>
+              <Link href="https://www.instagram.com/trilokigroup/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><Instagram /></Link>
               <Link href="#" className="text-gray-400 hover:text-white"><Twitter /></Link>
             </div>
           </div>

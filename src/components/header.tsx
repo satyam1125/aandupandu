@@ -20,6 +20,7 @@ export function Header() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          className="flex-shrink-0"
         >
           <Link href="/" className="flex items-center space-x-2">
             <Image
@@ -35,48 +36,48 @@ export function Header() {
           </Link>
         </motion.div>
 
-        {/* Right Side: Desktop Nav & Mobile Hamburger */}
-        <div className="flex items-center gap-6">
-          {/* Desktop Navigation Links (Visible on lg screens and up) */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <Link href="/" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              Home
-            </Link>
-            <Link href="/#packages" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              Packages
-            </Link>
-            <Link href="/#features" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              Features
-            </Link>
-            <Link href="/#about" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
-              About Us
-            </Link>
-          </nav>
-
-          {/* Desktop Buttons (Visible on lg screens and up) */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="border-[#00A7B5] text-[#00A7B5] hover:bg-[#00A7B5] hover:text-white"
-            >
-              <Link href="#contact">
-                <Phone className="mr-2 h-4 w-4" />
-                Contact Us
+        {/* Right Side Wrapper: Contains both Desktop and Mobile Nav */}
+        <div>
+          {/* Desktop Navigation & Buttons (Visible on xl screens and up) */}
+          <div className="hidden xl:flex items-center gap-6">
+            <nav className="flex items-center gap-8">
+              <Link href="/" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
+                Home
               </Link>
-            </Button>
-            <Button
-              size="sm"
-              className="bg-[#FF8200] hover:bg-[#FF9F1C] text-white"
-              onClick={() => setBookingModalOpen(true)}
-            >
-              Book Now
-            </Button>
+              <Link href="/#packages" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
+                Packages
+              </Link>
+              <Link href="/#features" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
+                Features
+              </Link>
+              <Link href="/#about" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
+                About Us
+              </Link>
+            </nav>
+            <div className="flex items-center gap-4">
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="border-[#00A7B5] text-[#00A7B5] hover:bg-[#00A7B5] hover:text-white"
+              >
+                <Link href="#contact">
+                  <Phone className="mr-2 h-4 w-4" />
+                  Contact Us
+                </Link>
+              </Button>
+              <Button
+                size="sm"
+                className="bg-[#FF8200] hover:bg-[#FF9F1C] text-white"
+                onClick={() => setBookingModalOpen(true)}
+              >
+                Book Now
+              </Button>
+            </div>
           </div>
 
-          {/* Mobile Hamburger Menu (Visible below lg screens) */}
-          <div className="flex lg:hidden">
+          {/* Mobile Hamburger Menu (Visible below xl screens) */}
+          <div className="flex xl:hidden">
             <MobileNav />
           </div>
         </div>

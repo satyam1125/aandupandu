@@ -21,7 +21,7 @@ const InstagramButton = () => {
   );
 
   return (
-    <Link href="https://www.instagram.com/triloki_divine_journey/" target="_blank" passHref>
+    <Link href="https://www.instagram.com/trilokigroup/" target="_blank" passHref>
       <div className={`${styles.floatingButton} ${styles.instagramButton}`}>
         <InstagramIcon />
       </div>

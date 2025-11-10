@@ -54,6 +54,8 @@ const packages = [
   { id: "dodham", name: "Do Dham Helicopter Tour" },
   { id: "kedarnath", name: "Kedarnath Helicopter Tour" },
   { id: "road-chardham", name: "Road-based Chardham Yatra" },
+  { id: "kashmir", name: "Kashmir Tour" },
+  { id: "leh-ladakh", name: "Leh Ladakh Tour" },
 ]
 
 interface BookingModalProps {
