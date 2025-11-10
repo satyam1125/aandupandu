@@ -24,7 +24,7 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/T_logo.png"
-              alt="Triloki Divine Journey Logo"
+              alt="Triloki Hospitality Logo"
               width={60}
               height={60}
               className="rounded-full bg-[#00A7B5] object-cover"
@@ -45,6 +45,7 @@ export function Header() {
           <Link href="/#about" className="text-sm font-medium transition-colors hover:text-[#FF8200]">
             About Us
           </Link>
+
         </nav>
         <div className="flex items-center gap-4">
           <Button

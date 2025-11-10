@@ -50,21 +50,21 @@ export function HeroSection() {
           className="object-cover opacity-10"
         />
       </div>
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
-          <div className="flex flex-col justify-center space-y-4 flex-1">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-8 md:gap-12">
+          <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <div className="py-4">
                 <TypewriterEffect
                   words={words}
-                  className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                  className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
                 />
               </div>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 We guide travelers through India`s sacred landscapes — where mountains, temples, and ancient traditions meet. This journey is more than travel; it`s a calling.
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row items-start">
+            <div className="flex flex-col gap-2 sm:flex-row items-start">
               <Button
                 size="lg"
                 asChild
@@ -84,7 +84,7 @@ export function HeroSection() {
                 <Link href="#packages">Explore Packages</Link>
               </Button>
             </div>
-            <div className="flex items-center space-x-4 text-sm">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <div className="flex items-center space-x-1">
                 <span className="font-medium text-[#FF8200]">100+</span>
                 <span className="text-muted-foreground">Tours Completed</span>
@@ -99,7 +99,7 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square flex-1 flex justify-center items-center">
+          <div className="relative aspect-video overflow-hidden rounded-xl w-full">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00A7B5]/20 to-[#FF8200]/20 rounded-xl"></div>
             <video 
               src="/images/kashmir.mp4" 

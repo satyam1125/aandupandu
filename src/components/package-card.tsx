@@ -16,9 +16,9 @@ export function PackageCard({ title, description, duration, image, href }: Packa
   
 
   return (
-    <Card className="group overflow-hidden transition-shadow hover:shadow-lg rounded-lg border border-gray-200 p-0 max-w-full">
+    <Card className="group flex flex-col h-full overflow-hidden transition-shadow hover:shadow-lg rounded-lg border border-gray-200 p-0">
       {/* Image at the very top, flush with no top padding */}
-      <div className="relative h-28 sm:h-32 md:h-40 w-full">
+      <div className="relative h-32 sm:h-36 md:h-40 w-full">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
@@ -33,26 +33,26 @@ export function PackageCard({ title, description, duration, image, href }: Packa
       </div>
 
       {/* Title / Header */}
-      <CardHeader className="p-2 pb-1">
-        <CardTitle className="text-xs sm:text-sm md:text-base lg:text-lg font-black text-[#00A7B5] group-hover:text-[#FF8200] transition-colors tracking-widest uppercase drop-shadow-md line-clamp-2">
+      <CardHeader className="p-3 pb-1">
+        <CardTitle className="text-sm md:text-base font-black text-[#00A7B5] group-hover:text-[#FF8200] transition-colors tracking-widest uppercase line-clamp-2">
           {title}
         </CardTitle>
       </CardHeader>
 
       {/* Description / Content */}
-      <CardContent className="px-2 pb-1">
-        <p className="line-clamp-2 text-xs text-muted-foreground italic font-medium">
+      <CardContent className="p-3 pt-0 flex-grow">
+        <p className="line-clamp-2 text-xs sm:text-sm text-muted-foreground italic font-medium">
           {description}
         </p>
         
       </CardContent>
 
       {/* Footer / CTA */}
-      <CardFooter className="px-2 pb-2">
-        <Button asChild className="w-full bg-[#FF8200] hover:bg-[#FF9F1C] text-white text-xs py-1.5">
+      <CardFooter className="p-3 pt-0 mt-auto">
+        <Button asChild className="w-full bg-[#FF8200] hover:bg-[#FF9F1C] text-white text-sm py-2">
           <Link href={href}>
             View Details
-            <ChevronRight className="ml-1 h-3 w-3" />
+            <ChevronRight className="ml-1 h-4 w-4" />
           </Link>
         </Button>
       </CardFooter>

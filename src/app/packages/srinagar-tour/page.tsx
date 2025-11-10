@@ -36,7 +36,7 @@ export default function SrinagarTourPage() {
     <Layout>
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
-        <div className="relative h-[400px] rounded-xl overflow-hidden mb-12">
+        <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden mb-12">
           <div className="absolute inset-0 bg-black/20 z-10"></div>
           <Image
             src="https://i.pinimg.com/1200x/11/9f/f8/119ff87bf41ec80a34af37b20917401f.jpg"
@@ -46,14 +46,14 @@ export default function SrinagarTourPage() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end z-20">
-            <div className="p-8 text-white">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Srinagar Tour – 5 Days / 4 Nights</h1>
-              <p className="text-xl drop-shadow-md">A serene Kashmir getaway with houseboat stay, scenic lake views, and cultural exploration</p>
+            <div className="p-4 md:p-8 text-white">
+              <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">Srinagar Tour – 5 Days / 4 Nights</h1>
+              <p className="text-lg md:text-xl drop-shadow-md">A serene Kashmir getaway with houseboat stay, scenic lake views, and cultural exploration</p>
             </div>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Overview */}

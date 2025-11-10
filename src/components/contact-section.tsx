@@ -10,7 +10,7 @@ export function ContactSection() {
     <section id="contact" className="py-12 md:py-24 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#00A7B5]/5"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid gap-10 px-4 md:px-10 md:gap-16 lg:grid-cols-2">
+        <div className="grid gap-10 px-4 md:px-10 md:gap-16 md:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
