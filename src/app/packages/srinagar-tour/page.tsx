@@ -1,7 +1,7 @@
 "use client";
 
 import { Layout } from "@/components/layout"
-import Image from "next/image"
+//import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -37,15 +37,16 @@ export default function SrinagarTourPage() {
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden mb-12">
-          <div className="absolute inset-0 bg-black/20 z-10"></div>
-          <Image
-            src="https://i.pinimg.com/1200x/11/9f/f8/119ff87bf41ec80a34af37b20917401f.jpg"
-            alt="Srinagar Tour - Dal Lake Kashmir"
-            fill
-            className="object-cover brightness-110 contrast-110 saturate-110"
-            priority
+          <div className="absolute inset-0 bg-black/40 z-10"></div>
+          <video
+            src="/images/kashmir.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end z-20">
+          <div className="absolute inset-0 flex items-end z-20">
             <div className="p-4 md:p-8 text-white">
               <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">Srinagar Tour – 5 Days / 4 Nights</h1>
               <p className="text-lg md:text-xl drop-shadow-md">A serene Kashmir getaway with houseboat stay, scenic lake views, and cultural exploration</p>
