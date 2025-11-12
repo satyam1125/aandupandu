@@ -48,7 +48,7 @@ export default function SrinagarTourPage() {
           />
           <div className="absolute inset-0 flex items-end z-20">
             <div className="p-4 md:p-8 text-white">
-              <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">Srinagar Tour – 5 Days / 4 Nights</h1>
+              <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">Kashmir Tour Package</h1>
               <p className="text-lg md:text-xl drop-shadow-md">A serene Kashmir getaway with houseboat stay, scenic lake views, and cultural exploration</p>
             </div>
           </div>
@@ -244,84 +244,88 @@ export default function SrinagarTourPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl">Package Pricing</CardTitle>
-                <CardDescription>Choose from our 3-Star or 4-Star packages</CardDescription>
+                <CardDescription>Choose from our flexible tour duration options</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                {/* 3-Star Package */}
+                {/* 4 Night 5 Day Package */}
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-[#00A7B5]">3-Star Package</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Includes: Spring City Inn / Your Hive / Sideeq Palace + Czara Group Houseboat + Sedan Cab
-                  </p>
+                  <h3 className="text-xl font-semibold mb-4 text-[#00A7B5]">4 Night 5 Day Package</h3>
                   <div className="overflow-x-auto">
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="bg-gray-100">
                           <th className="border p-3 text-left">Group Size</th>
-                          <th className="border p-3 text-left">Total Package Cost</th>
                           <th className="border p-3 text-left">Per Person Cost</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border p-3">2 Adults</td>
-                          <td className="border p-3 font-semibold">₹22,500</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹11,250</td>
+                          <td className="border p-3">2 Persons</td>
+                          <td className="border p-3 text-[#00A7B5] font-semibold">₹13,999/- PP</td>
                         </tr>
                         <tr>
-                          <td className="border p-3">4 Adults</td>
-                          <td className="border p-3 font-semibold">₹32,999</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹8,250</td>
-                        </tr>
-                        <tr>
-                          <td className="border p-3">4+ Persons</td>
-                          <td className="border p-3 font-semibold">Contact Us</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹7,999</td>
+                          <td className="border p-3">4 Persons</td>
+                          <td className="border p-3 text-[#00A7B5] font-semibold">₹9,999/- PP</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
 
-                {/* 4-Star Package */}
+                {/* 5 Night 6 Day Package */}
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-[#00A7B5]">4-Star Package</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Includes: Central Park / Similar + Skindara Palace Houseboat + Sedan/Innova Cab
-                  </p>
+                  <h3 className="text-xl font-semibold mb-4 text-[#00A7B5]">5 Night 6 Day Package</h3>
                   <div className="overflow-x-auto">
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="bg-gray-100">
                           <th className="border p-3 text-left">Group Size</th>
-                          <th className="border p-3 text-left">Total Package Cost</th>
                           <th className="border p-3 text-left">Per Person Cost</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border p-3">2 Adults</td>
-                          <td className="border p-3 font-semibold">₹29,999</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹14,999</td>
+                          <td className="border p-3">2 Persons</td>
+                          <td className="border p-3 text-[#00A7B5] font-semibold">₹15,999/- PP</td>
                         </tr>
                         <tr>
-                          <td className="border p-3">4 Adults (Sedan)</td>
-                          <td className="border p-3 font-semibold">₹49,500</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹12,375</td>
-                        </tr>
-                        <tr>
-                          <td className="border p-3">4 Adults (Innova)</td>
-                          <td className="border p-3 font-semibold">₹53,400</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹13,350</td>
-                        </tr>
-                        <tr>
-                          <td className="border p-3">6+ Persons</td>
-                          <td className="border p-3 font-semibold">Contact Us</td>
-                          <td className="border p-3 text-[#00A7B5] font-semibold">₹12,170</td>
+                          <td className="border p-3">4 Persons</td>
+                          <td className="border p-3 text-[#00A7B5] font-semibold">₹11,999/- PP</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
+                </div>
+
+                {/* 6 Night 7 Day Package */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-[#00A7B5]">6 Night 7 Day Package</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="border p-3 text-left">Group Size</th>
+                          <th className="border p-3 text-left">Per Person Cost</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td className="border p-3">2 Persons</td>
+                          <td className="border p-3 text-[#00A7B5] font-semibold">₹18,999/- PP</td>
+                        </tr>
+                        <tr>
+                          <td className="border p-3">4 Persons</td>
+                          <td className="border p-3 text-[#00A7B5] font-semibold">₹15,999/- PP</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Note:</strong> Prices are per person (PP). For groups larger than 4 persons or custom requirements, please contact us for a personalized quote.
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -543,7 +547,7 @@ export default function SrinagarTourPage() {
               <CardContent className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Best Time:</span>
-                  <span className="font-semibold">Apr - Oct</span>
+                  <span className="font-semibold">Nov-May</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Group Size:</span>
@@ -551,7 +555,7 @@ export default function SrinagarTourPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Starting From:</span>
-                  <span className="font-semibold text-[#00A7B5]">₹8,000/person</span>
+                  <span className="font-semibold text-[#00A7B5]">₹9,999/person</span>
                 </div>
               </CardContent>
             </Card>
