@@ -31,11 +31,6 @@ export function MobileNav() {
         type="button"
         variant="ghost"
         onClick={toggleMenu}
-        onTouchStart={(e) => {
-          // ensure touch opens menu immediately on mobile
-          e.stopPropagation()
-          toggleMenu()
-        }}
         aria-expanded={isOpen}
         aria-label={isOpen ? "Close menu" : "Open menu"}
         className="p-2"
