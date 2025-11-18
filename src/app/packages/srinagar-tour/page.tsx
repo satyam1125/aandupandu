@@ -396,83 +396,71 @@ export default function SrinagarTourPage() {
               </CardContent>
             </Card>
 
-            {/* Contact Form */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl">Inquiry Form</CardTitle>
-                <CardDescription>Have questions? Send us a message and we&apos;ll get back to you shortly.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
-                      <div className="relative">
-                        <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                        <Input
-                          id="name"
-                          name="name"
-                          placeholder="Enter your name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="pl-10"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
-                      <div className="relative">
-                        <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder="your@email.com"
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="pl-10"
-                          required
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number *</Label>
-                    <div className="relative">
-                      <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        placeholder="+91 1234567890"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="pl-10"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <div className="relative">
-                      <MessageSquare className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder="Tell us about your travel plans, group size, preferred dates..."
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="pl-10 min-h-[120px]"
-                      />
-                    </div>
-                  </div>
-                  <Button type="submit" className="w-full bg-[#00A7B5] hover:bg-[#00A7B5]/90">
-                    Send Inquiry
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+          <section
+  id="booking"
+  className="w-full py-16 md:py-24 bg-gradient-to-b from-white to-[#B0D8DF]/20"
+>
+  <div className="container mx-auto px-4 md:px-6">
+    <div className="max-w-3xl mx-auto text-center space-y-6">
+
+      {/* Title + Description */}
+      <div className="space-y-4">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#00A7B5]">
+          Book Your Road Based Chardham Tour
+        </h2>
+
+        <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed mx-auto">
+          Fill out the form to register for the Road Based Chardham Tour. Our team will get in 
+          touch with you to confirm your booking and provide further details.
+        </p>
+      </div>
+
+      {/* Contact Info */}
+      <div className="space-y-2">
+        <h3 className="text-xl font-bold">Contact Information</h3>
+
+        <div className="flex flex-col items-center gap-2 text-center">
+
+          <div className="flex items-center gap-2">
+            <MapPin className="h-5 w-5 text-[#FF8200]" />
+            <span>Hotel Satyam Swagat, Uchapul Aryanagar, Jwalapur, Haridwar</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Phone className="h-5 w-5 text-[#FF8200]" />
+            <span>+91-9720340187 / 8445214371</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Mail className="h-5 w-5 text-[#FF8200]" />
+            <span>hospitality.triloki@gmail.com</span>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+
+        <a
+          href="/packages/contact-book"
+          className="px-6 py-3 rounded-md bg-[#FF8200] hover:bg-[#FF9F1C] text-white text-lg font-medium"
+        >
+          Book Now
+        </a>
+
+        <a
+          href="/packages/contact-book"
+          className="px-6 py-3 rounded-md border border-[#00A7B5] text-[#00A7B5] hover:bg-[#00A7B5] hover:text-white text-lg font-medium"
+        >
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
           </div>
 
           {/* Sidebar */}

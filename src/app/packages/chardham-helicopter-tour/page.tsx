@@ -562,7 +562,7 @@ export default function ChardhamHelicopterTourPage() {
         </div>
       </section>
 
-      <section id="booking" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-[#B0D8DF]/20">
+      {/* <section id="booking" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-[#B0D8DF]/20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-10 px-4 md:px-10 md:gap-16 lg:grid-cols-2">
             <motion.div
@@ -608,7 +608,91 @@ export default function ChardhamHelicopterTourPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section
+  id="booking"
+  className="w-full py-16 md:py-24 bg-gradient-to-b from-white to-[#B0D8DF]/20"
+>
+  <div className="container mx-auto px-4 md:px-6">
+    <div className="max-w-3xl mx-auto text-center space-y-6">
+
+      {/* Title + Description */}
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="space-y-4"
+      >
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#00A7B5]">
+          Book Your Chardham Helicopter Tour
+        </h2>
+
+        <p className="text-muted-foreground md:text-xl mx-auto max-w-2xl">
+          Fill out the form to register for the Chardham Helicopter Tour.
+          Our team will get in touch with you to confirm your booking
+          and provide further details.
+        </p>
+      </motion.div>
+
+      {/* Contact Information */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="space-y-3"
+      >
+        <h3 className="text-xl font-bold">Contact Information</h3>
+
+        <div className="flex flex-col items-center gap-2 text-center">
+
+          <div className="flex items-center gap-2">
+            <MapPin className="h-5 w-5 text-[#FF8200]" />
+            <span>Hotel Satyam Swagat, Uchapul Aryanagar, Jwalapur, Haridwar</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Phone className="h-5 w-5 text-[#FF8200]" />
+            <span>+91-9720340187 / 8445214371</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Mail className="h-5 w-5 text-[#FF8200]" />
+            <span>hospitality.triloki@gmail.com</span>
+          </div>
+
+        </div>
+      </motion.div>
+
+      {/* Buttons */}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="flex flex-col sm:flex-row justify-center gap-4 pt-6"
+      >
+        <a
+          href="contact-book"
+          className="px-6 py-3 rounded-md bg-[#FF8200] hover:bg-[#FF9F1C] text-white text-lg font-medium"
+        >
+          Book Now
+        </a>
+
+        <a
+          href="contact-book"
+          className="px-6 py-3 rounded-md border border-[#00A7B5] text-[#00A7B5] hover:bg-[#00A7B5] hover:text-white text-lg font-medium"
+        >
+          Contact Us
+        </a>
+      </motion.div>
+
+    </div>
+  </div>
+</section>
+
+
     </Layout>
   )
 }
