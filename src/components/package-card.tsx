@@ -49,12 +49,19 @@ export function PackageCard({ title, description, duration, image, href }: Packa
 
       {/* Footer / CTA */}
       <CardFooter className="p-3 pt-0 mt-auto">
-        <Button asChild className="w-full bg-[#FF8200] hover:bg-[#FF9F1C] text-white text-sm py-2">
-          <Link href={href}>
-            View Details
-            <ChevronRight className="ml-1 h-4 w-4" />
-          </Link>
-        </Button>
+        <div className="grid grid-cols-2 gap-2 w-full">
+          <Button asChild className="bg-[#FF8200] hover:bg-[#FF9F1C] text-white text-sm py-2">
+            <Link href={href}>
+              View Details
+              <ChevronRight className="ml-1 h-4 w-4" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="text-[#00A7B5] border-[#00A7B5] hover:bg-[#00A7B5] hover:text-white text-sm py-2">
+            <Link href="/#contact">
+              Contact
+            </Link>
+          </Button>
+        </div>
       </CardFooter>
     </Card>
   )

@@ -6,7 +6,6 @@ import { ChevronRight, Clock, Calendar, MapPin, CheckCircle2, AlertCircle, Phone
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { RegistrationForm } from "@/components/registration-form"
 import { motion } from "framer-motion"
 
 export default function ChardhamHelicopterTourPage() {

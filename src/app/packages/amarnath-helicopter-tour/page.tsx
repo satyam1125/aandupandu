@@ -2,11 +2,11 @@
 
 import { Layout } from "@/components/layout"
 import Image from "next/image"
+import Link from "next/link"
 import { ChevronRight, Clock, Calendar, MapPin, CheckCircle2, AlertCircle, Phone, Mail } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { RegistrationForm } from "@/components/registration-form"
 import { motion } from "framer-motion"
 
 export default function AmarnathHelicopterTourPage() {
@@ -504,6 +504,7 @@ export default function AmarnathHelicopterTourPage() {
       </motion.div>
 
       {/* Buttons Section */}
+      {/* Buttons Section */}
       <motion.div
         initial={{ opacity: 0, x: 30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -512,22 +513,21 @@ export default function AmarnathHelicopterTourPage() {
         className="flex flex-col items-center space-y-4"
       >
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-6">
-
           {/* Book Now → Goes to booking page */}
-          <a
+          <Link
             href="/packages/contact-book"
             className="px-6 py-3 rounded-md bg-[#FF8200] hover:bg-[#FF9F1C] text-white text-lg font-medium"
           >
             Book Now
-          </a>
+          </Link>
 
           {/* Contact Us → Goes to contact page */}
-          <a
+          <Link
             href="/packages/contact-book"
             className="px-6 py-3 rounded-md border border-[#00A7B5] text-[#00A7B5] hover:bg-[#00A7B5] hover:text-white text-lg font-medium"
           >
             Contact Us
-          </a>
+          </Link>
 
         </div>
       </motion.div>
