@@ -11,10 +11,18 @@ export default function Home() {
     {
       title: "Vaishno Devi Helicopter Tour",
       description:
-        "Experience the divine Chardham Yatra (Yamunotri, Gangotri, Kedarnath & Badrinath) in comfort with our premium helicopter service.",
+        "Experience the sacred Vaishno Devi darshan with helicopter transfers (Katra–Sanjichat), priority assistance, comfortable hotel stay, and end‑to‑end support.",
       duration: "2 Nights / 3 Days",
       image: "/images/devi.png",
       href: "/packages/vaishno-devi-yatra",
+    },
+    {
+      title: "Honeymoon Package",
+      description:
+        "Honeymoon in Kashmir, Manali or Goa with decorated rooms and romantic touches. Basic 3★: ₹17,000 per person • Luxury: ₹25,000 per person.",
+      duration: "4 Nights / 5 Days",
+      image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop",
+      href: "/packages/Honeymoon-trip",
     },
     {
       title: "Kashmir Valley Escape Package",
