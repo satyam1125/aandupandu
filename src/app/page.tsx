@@ -9,6 +9,14 @@ import Image from "next/image"
 export default function Home() {
   const packageItems = [
     {
+      title: "Vaishno Devi Helicopter Tour",
+      description:
+        "Experience the divine Chardham Yatra (Yamunotri, Gangotri, Kedarnath & Badrinath) in comfort with our premium helicopter service.",
+      duration: "2 Nights / 3 Days",
+      image: "/images/devi.png",
+      href: "/packages/vaishno-devi-yatra",
+    },
+    {
       title: "Kashmir Valley Escape Package",
       description: "Experience the serene beauty of Kashmir with houseboat stays, Mughal gardens, and Dal Lake exploration.",
       duration: "4 Nights / 5 Days",
