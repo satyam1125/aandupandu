@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -53,7 +53,13 @@ const formSchema = z.object({
 });
 
 export function RegistrationForm() {
+  const [redirectURL, setRedirectURL] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined")
+      setRedirectURL(`${window.location.origin}/thank-you`);
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -120,7 +126,7 @@ export function RegistrationForm() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-6 w-full"
+              className="space-y-6"
             >
               <input
                 type="hidden"
@@ -130,7 +136,7 @@ export function RegistrationForm() {
               <input
                 type="hidden"
                 name="redirect"
-                value="https://yourdomain.com/thank-you"
+                value={redirectURL || "https://web3forms.com/success"}
               />
               <input
                 type="checkbox"

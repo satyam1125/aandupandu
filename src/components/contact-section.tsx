@@ -5,8 +5,14 @@ import { MapPin, Phone, Mail, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect, useState } from "react";
 
 export function ContactSection() {
+  const [redirectURL, setRedirectURL] = useState("");
+  useEffect(() => {
+    if (typeof window !== "undefined") setRedirectURL(`${window.location.origin}/thank-you`);
+  }, []);
+
   return (
     <section id="contact" className="py-12 md:py-24 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#00A7B5]/5"></div>
@@ -58,7 +64,7 @@ export function ContactSection() {
                 <CardContent>
                   <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
                     <input type="hidden" name="access_key" value="d8e15609-af66-4bd6-a266-e64ef6a0d449" />
-                    <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you" />
+                    <input type="hidden" name="redirect" value={redirectURL || "https://web3forms.com/success"} />
                     <input type="checkbox" name="botcheck" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

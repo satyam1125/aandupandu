@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
+import { useEffect, useState } from "react"
 
 interface BookingModalProps {
   open: boolean
@@ -17,6 +18,13 @@ interface BookingModalProps {
 }
 
 export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModalProps) {
+  const [redirectURL, setRedirectURL] = useState("")
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setRedirectURL(`${window.location.origin}/thank-you`)
+    }
+  }, [])
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
@@ -29,7 +37,7 @@ export function BookingModal({ open, onOpenChange, defaultPackage }: BookingModa
 
         <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
           <input type="hidden" name="access_key" value="d8e15609-af66-4bd6-a266-e64ef6a0d449" />
-          <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you" />
+          <input type="hidden" name="redirect" value={redirectURL || "https://web3forms.com/success"} />
           <input type="checkbox" name="botcheck" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
